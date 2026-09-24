@@ -1,0 +1,88 @@
+name: Build unsigned IPA
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stufo-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ipa:
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify bundled learning content
+        run: python3 scripts/content.py
+      - name: Compile native iPhone app
+        timeout-minutes: 10
+        run: |
+          set -o pipefail
+          mkdir -p build
+          xcodebuild -version
+          xcodebuild -project Stufo.xcodeproj -scheme Stufo -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build/device CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='' build 2>&1 | tee build/device-build.log
+      - name: Package unsigned IPA
+        run: |
+          mkdir -p build/package/Payload
+          cp -R build/device/Build/Products/Release-iphoneos/Stufo.app build/package/Payload/
+          /usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' build/package/Payload/Stufo.app/Info.plist
+          file build/package/Payload/Stufo.app/Stufo
+          cd build/package
+          zip -q -r ../Stufo-1.0-unsigned.ipa Payload
+          cd ..
+          shasum -a 256 Stufo-1.0-unsigned.ipa > SHA256.txt
+          printf 'Commit: %s\nUnsigned arm64 device build. Requires signing before installation.\n' "$GITHUB_SHA" > BUILD.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Stufo-unsigned-IPA
+          path: |
+            build/Stufo-1.0-unsigned.ipa
+            build/SHA256.txt
+            build/BUILD.txt
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: device-build-log
+          path: build/device-build.log
+  smoke:
+    needs: ipa
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select iPhone simulator
+        run: |
+          xcrun simctl list devices available -j > /tmp/stufo-devices.json
+          python3 - <<'PY'
+          import json, os
+          data=json.load(open('/tmp/stufo-devices.json'))
+          phones=[d for ds in data['devices'].values() for d in ds if 'iPhone' in d['name'] and d.get('isAvailable')]
+          assert phones, 'No iPhone simulator available'
+          with open(os.environ['GITHUB_ENV'],'a') as f: f.write('STUFO_SIM='+phones[0]['udid']+'\n')
+          PY
+      - name: One native journey check and screenshots
+        timeout-minutes: 10
+        run: |
+          set -o pipefail
+          mkdir -p build
+          xcodebuild -project Stufo.xcodeproj -scheme Stufo -configuration Debug -destination "platform=iOS Simulator,id=$STUFO_SIM" -derivedDataPath build/simulator -resultBundlePath build/Smoke.xcresult CODE_SIGNING_ALLOWED=NO test 2>&1 | tee build/smoke.log
+      - name: Collect screenshots
+        if: always()
+        run: |
+          mkdir -p build/screenshots
+          if [ -d build/Smoke.xcresult ]; then
+            xcrun xcresulttool export attachments --path build/Smoke.xcresult --output-path build/screenshots || true
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Stufo-native-preview
+          path: |
+            build/screenshots
+            build/smoke.log
+          if-no-files-found: warn
+          retention-days: 14

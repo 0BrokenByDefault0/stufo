@@ -1,0 +1,3461 @@
+{
+  "chapters": [
+    {
+      "id": "start",
+      "title": "Find your footing",
+      "subtitle": "Know the room, the signal, and the tools before chasing a sound.",
+      "symbol": "compass.drawing"
+    },
+    {
+      "id": "record",
+      "title": "Capture the feeling",
+      "subtitle": "A confident performance and a clean recording beat a complicated chain.",
+      "symbol": "mic"
+    },
+    {
+      "id": "edit",
+      "title": "Build the best take",
+      "subtitle": "Comp, clean, and tune without polishing away the personality.",
+      "symbol": "scissors"
+    },
+    {
+      "id": "mix",
+      "title": "Make it translate",
+      "subtitle": "Balance, tone, and dynamics that serve the song on real speakers.",
+      "symbol": "slider.horizontal.3"
+    },
+    {
+      "id": "space",
+      "title": "Create depth & movement",
+      "subtitle": "Delays, reverb, automation, and the moments people remember.",
+      "symbol": "water.waves"
+    },
+    {
+      "id": "create",
+      "title": "Develop your language",
+      "subtitle": "Rhythm, harmony, arrangement, and a sound that belongs to you.",
+      "symbol": "pianokeys"
+    },
+    {
+      "id": "finish",
+      "title": "Finish with intention",
+      "subtitle": "Turn a working session into a record you can confidently share.",
+      "symbol": "checkmark.seal"
+    },
+    {
+      "id": "advance",
+      "title": "Work like an artist",
+      "subtitle": "Build judgment, speed, and repeatable habits through deliberate practice.",
+      "symbol": "sparkles"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "orientation",
+      "chapter": "start",
+      "title": "Find your way around",
+      "subtitle": "Five places you will use in almost every session.",
+      "visual": "arrangement",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Think in jobs. The Arrange view is where performances live in time. The Console is where their sound is balanced and processed. The Browser finds audio, instruments, and effects. The Inspector exposes details for the selected item. The transport controls playback and recording.",
+        "A track is the timeline container; a channel is the audio path in the mixer. They often correspond, but buses, effects returns, and multi-output instruments make the relationship less simple. Studio One tutorials may call a working document a Song; current Studio Pro calls it a Session."
+      ],
+      "steps": [
+        "Create an empty Session and save it in its own folder with an unmistakable name.",
+        "Open the Console with its onscreen button. Select a track and locate its corresponding channel.",
+        "Open the Browser, Inspector, and editor one at a time. Notice what remains selected as you change views.",
+        "Locate play, stop, record, tempo, the metronome, and the loop range before adding effects."
+      ],
+      "mistake": "Opening every panel at once makes the application feel harder than it is. Keep only the panel you need visible.",
+      "practice": "Import a short beat, create one empty vocal track, rename both, and practice switching between arrangement and mixer without losing your place.",
+      "success": "You can point to the audio event, its track, its channel, and the Main output without guessing.",
+      "tags": [
+        "interface",
+        "navigation",
+        "beginner",
+        "console",
+        "browser",
+        "inspector",
+        "song",
+        "session"
+      ],
+      "sources": [
+        "console",
+        "toolbox"
+      ],
+      "question": "Where do you usually balance channel levels and insert effects?",
+      "options": [
+        "The Console",
+        "The file name field",
+        "The metronome"
+      ],
+      "answer": 0,
+      "explanation": "The Console exposes the channel signal paths. The Arrange view answers where a performance happens."
+    },
+    {
+      "id": "signal",
+      "chapter": "start",
+      "title": "Follow the signal",
+      "subtitle": "Stop guessing where the sound disappeared.",
+      "visual": "signal",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Every sound takes a route. For a microphone, start with the physical mic and cable, continue through the interface preamp and converter, then the DAW input, track, channel, output, and headphones. A meter tells you whether signal has reached that point.",
+        "Monitoring and recording are different jobs. You can hear an input without recording it, or record an input while listening through a different monitoring path. Keeping those ideas separate solves a surprising number of beginner problems."
+      ],
+      "steps": [
+        "With playback stopped, speak and look for input on the interface.",
+        "Select the matching mono hardware input on the vocal track. Arm it and look for a meter response.",
+        "Check that the channel reaches your Main output, which reaches the interface outputs you actually use.",
+        "If one meter moves and the next does not, inspect the connection between those two stages before changing anything else."
+      ],
+      "mistake": "Adding gain at the end of a broken route cannot fix a muted, disconnected, or wrongly selected input.",
+      "practice": "Draw your route in a session note, then deliberately mute one stage. Diagnose it using the meters and restore it.",
+      "success": "You can locate a silent stage without changing three unrelated settings.",
+      "tags": [
+        "sound",
+        "silent",
+        "monitor",
+        "routing",
+        "input",
+        "output",
+        "microphone"
+      ],
+      "sources": [
+        "audio",
+        "console"
+      ],
+      "question": "An interface meter moves but the DAW input meter does not. What should you inspect first?",
+      "options": [
+        "The reverb decay",
+        "The DAW input assignment",
+        "The export format"
+      ],
+      "answer": 1,
+      "explanation": "The problem is likely between the interface and selected DAW input, not downstream processing."
+    },
+    {
+      "id": "audio-setup",
+      "chapter": "start",
+      "title": "Set up your Apollo session",
+      "subtitle": "One device, one sample rate, one monitoring plan.",
+      "visual": "signal",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Use the Apollo as your Studio Pro audio device when it is your recording and listening interface. Match the session’s sample rate to your workflow and keep it consistent. 48 kHz and 24-bit recording are a practical starting point, not an automatic sound-quality upgrade over a well-made 44.1 kHz recording.",
+        "Create a mono input for the one microphone socket you are using and a stereo output for your speakers or headphones. A stereo track does not make one microphone more spacious; it can simply create an empty or redundant side."
+      ],
+      "steps": [
+        "In the audio-device settings, select Apollo for your recording and playback path.",
+        "In the session audio I/O setup, map a mono input to the actual Apollo mic input and confirm the stereo Main output.",
+        "Create a mono audio track, choose that input, and name it Lead Dry.",
+        "Record ten seconds and play it back with input monitoring disabled so you hear the recorded file."
+      ],
+      "mistake": "A correct device selection does not guarantee that a particular track has the correct input. Check both.",
+      "practice": "Make a tiny setup session containing a beat and a dry mic track. Reopen it and prove that playback and recording still work.",
+      "success": "You can capture and replay a clean mono voice with the correct left/right playback.",
+      "tags": [
+        "apollo",
+        "setup",
+        "48khz",
+        "sample rate",
+        "mono",
+        "stereo",
+        "interface"
+      ],
+      "sources": [
+        "audio",
+        "ua-inserts"
+      ],
+      "question": "For one ordinary vocal microphone, what track format is the sensible starting point?",
+      "options": [
+        "Mono",
+        "Stereo because it sounds wider",
+        "Surround"
+      ],
+      "answer": 0,
+      "explanation": "One microphone provides one signal. Width is a later production decision."
+    },
+    {
+      "id": "latency",
+      "chapter": "start",
+      "title": "Understand the delay you feel",
+      "subtitle": "Buffer size is a tradeoff, not a quality knob.",
+      "visual": "levels",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "A computer processes audio in blocks. Smaller buffers generally shorten the wait but give the computer less time to finish its work. Larger buffers give it breathing room during mixing. The buffer does not change the resolution of a recorded waveform.",
+        "The time you feel also includes converters, driver buffering, and plug-in latency. At 48 kHz, 128 samples is about 2.67 milliseconds for one block; it is not the total round-trip latency. Look-ahead limiting, linear-phase processing, and some DSP routing can add much more."
+      ],
+      "steps": [
+        "Choose how you will monitor: Apollo Console or the DAW. Avoid listening to both copies.",
+        "For DAW monitoring, start around 64 or 128 samples, then raise the buffer if the session crackles.",
+        "During recording, remove unnecessary high-latency processing from the live path and mix output.",
+        "During mixing, try 256 or 512 samples, or more if needed. There is no prize for a small buffer when nobody is performing."
+      ],
+      "mistake": "If a high-latency plug-in is the problem, reducing the buffer alone may barely change what you feel.",
+      "practice": "Speak a short phrase with DAW monitoring at two buffer sizes. Then compare Console monitoring. Note which route you are actually hearing.",
+      "success": "You can choose a stable recording setup and explain why your mixing setup can be different.",
+      "tags": [
+        "latency",
+        "lag",
+        "buffer",
+        "late",
+        "delay",
+        "crackle",
+        "1024",
+        "64",
+        "128"
+      ],
+      "sources": [
+        "ua-latency"
+      ],
+      "question": "Does a larger buffer automatically make the recorded audio lower quality?",
+      "options": [
+        "Yes",
+        "No; it mainly changes processing timing and stability",
+        "Only with a mono track"
+      ],
+      "answer": 1,
+      "explanation": "Buffer size affects responsiveness and workload, not recording bit depth."
+    },
+    {
+      "id": "gain",
+      "chapter": "start",
+      "title": "Leave space for the performance",
+      "subtitle": "Healthy recording levels without chasing the red.",
+      "visual": "levels",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Recording gain begins at the microphone preamp. A mix fader changes what you hear later; it does not rescue a converter that clipped before the signal reached your session. Set gain using the loudest part of the actual delivery.",
+        "For a starting point, let energetic vocal peaks fall somewhere around −12 to −6 dBFS and leave extra room for an unpredictable performance. These are working ranges, not laws. Clean signal and consistent distance matter more than hitting one number."
+      ],
+      "steps": [
+        "Have the beat playing at a comfortable headphone level and rehearse the loudest line.",
+        "Adjust the interface preamp while watching its input meter and the DAW input.",
+        "Record a short test; listen for grit, overloaded syllables, room noise, and excessive breaths.",
+        "If peaks are safe but the voice feels quiet in headphones, change the monitor mix rather than pushing the preamp toward clipping."
+      ],
+      "mistake": "Normalizing a quiet file later raises noise along with the vocal. Recording too hot trades a small convenience for irreversible damage.",
+      "practice": "Record a quiet phrase and your loudest phrase without moving the preamp. Find one setting that captures both cleanly.",
+      "success": "Your loudest delivery remains clean and the quieter material is usable without extreme gain increases.",
+      "tags": [
+        "gain",
+        "clipping",
+        "distortion",
+        "level",
+        "headroom",
+        "dbfs",
+        "preamp"
+      ],
+      "sources": [
+        "audio"
+      ],
+      "question": "Your input clips before recording. Which control should you address first?",
+      "options": [
+        "The interface preamp gain",
+        "The reverb send",
+        "The master export name"
+      ],
+      "answer": 0,
+      "explanation": "The overload happens upstream. A downstream fader cannot unclip that recording."
+    },
+    {
+      "id": "files",
+      "chapter": "start",
+      "title": "Save a session you can trust",
+      "subtitle": "Make tomorrow’s session open like today’s.",
+      "visual": "export",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "A session file is a set of decisions and references. It is not automatically a container for every audio file you used. A beat dragged from Downloads or an external drive can remain dependent on that location unless copied into the session’s media.",
+        "Use a simple folder system: one song folder, clear versions, and a separate backup. A sync folder is useful but can faithfully sync a deletion too. Keep at least one additional version you can recover independently."
+      ],
+      "steps": [
+        "Name the session with the song title and save it before recording.",
+        "Use the session’s media-management options to bring external audio into the session folder; verify what the option says in your version.",
+        "Save a new version before major edits or printing processing.",
+        "After closing the DAW, make a backup copy. Reopen the working session and check for missing-media warnings."
+      ],
+      "mistake": "Renaming or moving source audio in Finder can break references. Use the DAW’s media-management tools when reorganizing an active song.",
+      "practice": "Make a copy of a tiny practice session with its media and open the copy independently. Confirm that the beat and vocal both play.",
+      "success": "You know where your session, media, exports, and recoverable backup live.",
+      "tags": [
+        "save",
+        "backup",
+        "missing",
+        "files",
+        "media",
+        "folder",
+        "archive"
+      ],
+      "sources": [
+        "v-save"
+      ],
+      "question": "Why can a session file open with missing audio?",
+      "options": [
+        "The session can reference audio stored elsewhere",
+        "The tempo was too slow",
+        "A mono mic requires stereo media"
+      ],
+      "answer": 0,
+      "explanation": "The session’s references and the actual media are separate unless the files have been collected."
+    },
+    {
+      "id": "apollo-monitor",
+      "chapter": "record",
+      "title": "Monitor once, record deliberately",
+      "subtitle": "Console, UAD MON, and the sound you actually keep.",
+      "visual": "signal",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Apollo Console can let you hear yourself without waiting for a round trip through the DAW. If you also enable software input monitoring, you may hear a second delayed copy: hollow, phasey, doubled, or echoing. Choose a single monitoring route.",
+        "For ordinary Console insert slots, UAD MON lets you hear processing without committing those inserts to the DAW input; UAD REC prints them. Unison processing has its own behavior and is committed on the input path. Do not assume MON makes a Unison preamp fully reversible."
+      ],
+      "steps": [
+        "Choose Console monitoring and turn off the Studio Pro track’s software monitor button while recording into the correctly armed track.",
+        "Start with an intentionally dry, clean capture. Check the Console REC/MON state on the channel you use.",
+        "Keep a tasteful headphone effect if it helps performance, while confirming whether that effect is being recorded.",
+        "Record a test, then bypass playback effects and listen to the actual captured file."
+      ],
+      "mistake": "UAD Spark/native plug-ins run on the computer; they are not automatically the same as the Apollo DSP versions available in Console.",
+      "practice": "Record one sentence with your intended Console setup, then inspect playback with no DAW inserts. Write down exactly what was printed.",
+      "success": "You know which processing is permanent and hear only one live copy of your voice.",
+      "tags": [
+        "apollo",
+        "console",
+        "uad",
+        "monitor",
+        "double",
+        "echo",
+        "unison",
+        "dry",
+        "wet"
+      ],
+      "sources": [
+        "ua-inserts"
+      ],
+      "question": "You hear a phasey duplicate of your live voice. What is a good first check?",
+      "options": [
+        "Whether Console and DAW monitoring are both audible",
+        "Whether the song title is too long",
+        "Whether export is set to WAV"
+      ],
+      "answer": 0,
+      "explanation": "Two monitoring paths can create a delayed duplicate of the same performance."
+    },
+    {
+      "id": "mic-technique",
+      "chapter": "record",
+      "title": "Get closer to a better vocal",
+      "subtitle": "The room and performance are part of your sound.",
+      "visual": "signal",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Before EQ, listen to what the microphone hears. A bare reflective room adds a short, hard echo that can be difficult to remove. A consistent distance, controlled headphone spill, and a pop filter can improve a recording more than another processor.",
+        "Start about a handspan away and adjust to the microphone and delivery. Closer can add weight and intimacy; farther can capture more room. Aim slightly across the capsule if plosives are excessive, then listen for lost clarity. Move with intention, not randomly."
+      ],
+      "steps": [
+        "Choose the quietest practical part of the room. Place absorption where reflected sound is strongest; avoid assuming thin foam fixes bass.",
+        "Set a pop filter and mark a comfortable standing position.",
+        "Perform the loudest section at the distance you will actually use, then set gain.",
+        "Record two distances and compare at matched playback level in the beat."
+      ],
+      "mistake": "A louder playback can make one position seem better. Match levels before judging the tone.",
+      "practice": "Record the same four bars close, medium, and slightly off-axis. Pick the version that needs the least correction.",
+      "success": "Your consonants are clear, plosives are controlled, and the vocal does not change tone every time your head moves.",
+      "tags": [
+        "microphone",
+        "room",
+        "plosive",
+        "pop filter",
+        "acoustics",
+        "recording"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "Which is a useful first response to repeated plosive blasts?",
+      "options": [
+        "Try placement, distance, and a pop filter",
+        "Add 10 dB of treble",
+        "Normalize every syllable"
+      ],
+      "answer": 0,
+      "explanation": "Preventing the burst at capture is usually cleaner than trying to repair it later."
+    },
+    {
+      "id": "first-recording",
+      "chapter": "record",
+      "title": "Record your first usable vocal",
+      "subtitle": "A ten-minute route from silence to a take.",
+      "visual": "arrangement",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "A good first recording session has a narrow goal: a beat plays, a mic records, and you can hear the result. Leave the elaborate vocal chain for later. Setup friction steals attention from delivery.",
+        "Use a lead track for the main performance and separate tracks for doubles and ad-libs. Naming the role now makes later routing much easier. A dry lead is a flexible source for every later decision."
+      ],
+      "steps": [
+        "Import the beat and set the tempo intentionally. If the beat already plays at the right speed, do not accidentally stretch it.",
+        "Create a mono lead track with the correct input. Choose one monitor path and test the recording level.",
+        "Give yourself a count-in or a few bars of lead-in. Record a short complete section rather than restarting after every small mistake.",
+        "Stop, disarm if needed, and play back. Save before adding another layer."
+      ],
+      "mistake": "Hearing the live input is not proof that audio was recorded. Confirm that a waveform exists and the recorded file plays.",
+      "practice": "Capture eight bars in three complete passes. Keep going through a small mistake so you learn which errors matter musically.",
+      "success": "Three takes are safely captured and you can identify the strongest overall performance.",
+      "tags": [
+        "record",
+        "first",
+        "vocal",
+        "rap",
+        "arm",
+        "count in",
+        "beat"
+      ],
+      "sources": [
+        "audio",
+        "v-record"
+      ],
+      "question": "What proves that a take was captured?",
+      "options": [
+        "Hearing your live mic alone",
+        "Playing back the recorded event",
+        "Seeing a plug-in window"
+      ],
+      "answer": 1,
+      "explanation": "Playback of the recorded event verifies the actual captured material."
+    },
+    {
+      "id": "takes",
+      "chapter": "record",
+      "title": "Record takes to layers",
+      "subtitle": "Keep alternatives without making a mess.",
+      "visual": "comping",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Layers let alternate performances share a track’s processing and routing. They are especially useful when you want several attempts at the same phrase but only one lead vocal at a time. A separate track is better when you want performances to sound together.",
+        "In the Record panel, Record Takes to Layers places successive takes into layers. The latest take becomes the active track material. Later you can build a comp from the best phrases while retaining the alternatives."
+      ],
+      "steps": [
+        "Define a short recording range that includes a natural lead-in and the phrase ending.",
+        "Enable Record Takes to Layers in the Record panel; check recording behavior with a small test.",
+        "Record three complete passes, changing only one intention per pass: calm, urgent, or conversational.",
+        "Expand the layers and label memorable takes before listening again."
+      ],
+      "mistake": "Comping every syllable immediately can hide the fact that one full take has better momentum. Start with a performance, then repair it.",
+      "practice": "Record one hook three ways and select the strongest full take before making any edits.",
+      "success": "You can switch alternatives without losing takes or accidentally stacking all of them.",
+      "tags": [
+        "takes",
+        "layers",
+        "loop",
+        "record",
+        "alternates",
+        "comping"
+      ],
+      "sources": [
+        "layers",
+        "v-layers"
+      ],
+      "question": "When do separate tracks make more sense than alternate layers?",
+      "options": [
+        "When two vocals should play together",
+        "When you want only one alternate performance",
+        "When you want fewer files at any cost"
+      ],
+      "answer": 0,
+      "explanation": "Separate tracks give simultaneous parts independent mix control."
+    },
+    {
+      "id": "doubles",
+      "chapter": "record",
+      "title": "Build doubles that feel intentional",
+      "subtitle": "Width starts with another performance.",
+      "visual": "stereo",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "A double is a new performance of the same part. Tiny differences in pitch, timing, and tone can add size. Copying a file makes an identical signal; panning two identical copies does not create the same natural width.",
+        "Use doubles where the arrangement needs support: a hook, an emphasized phrase, or a response. Constant stacking can make the lead less personal. Keep the strongest storytelling voice as the anchor."
+      ],
+      "steps": [
+        "Record the lead first and decide which words deserve reinforcement.",
+        "Perform a new left and right double, matching important consonants and phrase endings.",
+        "Lower both doubles until you mainly notice their absence when muted.",
+        "Check mono and reduce width tricks if the vocal becomes thin or unstable."
+      ],
+      "mistake": "Perfectly aligning every detail can remove useful human variation. Fix distracting flams; preserve the feeling.",
+      "practice": "Compare an eight-bar hook with doubles throughout against doubles on only its last two lines.",
+      "success": "The added voices make the section lift while the lyric stays easy to understand.",
+      "tags": [
+        "double",
+        "doubles",
+        "stack",
+        "width",
+        "stereo",
+        "hook"
+      ],
+      "sources": [
+        "v-align"
+      ],
+      "question": "Why is a new double different from a copied lead file?",
+      "options": [
+        "It contains a distinct performance",
+        "It is automatically louder",
+        "It needs no editing"
+      ],
+      "answer": 0,
+      "explanation": "Performance differences create a texture that identical copies do not."
+    },
+    {
+      "id": "performance",
+      "chapter": "record",
+      "title": "Direct your own performance",
+      "subtitle": "Record an intention, not just the right words.",
+      "visual": "arrangement",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "Technical confidence gives you room to perform. Decide who the line is addressed to and what changes emotionally across the verse. An understated delivery can feel intense when its timing and consonants are committed.",
+        "A useful take note describes a result: clearer ending, less rushed, stronger first word. A vague instruction like better gives you nothing to try. Capture contrasts and choose in context, not from memory."
+      ],
+      "steps": [
+        "Mark breaths, key words, and the emotional turn in the lyric.",
+        "Record one controlled pass, one more animated pass, and one quieter intimate pass.",
+        "Listen with the beat and compare the meaning, not just precision.",
+        "Keep the take that serves the song; use another only where it fixes a clear weakness."
+      ],
+      "mistake": "Recording endless exhausted takes can make the performance smaller. Step away when you stop hearing meaningful differences.",
+      "practice": "Choose four bars and change only emphasis on each pass. Note which version makes the lyric easiest to believe.",
+      "success": "You can name the intention of the take you chose.",
+      "tags": [
+        "performance",
+        "rap",
+        "delivery",
+        "flow",
+        "breath",
+        "takes"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "Which take direction is most actionable?",
+      "options": [
+        "Make it better",
+        "Leave more space before the last word",
+        "Sound expensive"
+      ],
+      "answer": 1,
+      "explanation": "A specific performance change can be attempted and evaluated."
+    },
+    {
+      "id": "logic-migration",
+      "chapter": "record",
+      "title": "Bring a Logic song with you",
+      "subtitle": "Move the music while preserving your options.",
+      "visual": "export",
+      "level": "Foundation",
+      "minutes": 8,
+      "concepts": [
+        "A DAW project is not a universal format. Plug-in states, take folders, routing, and automation do not all translate by moving the project file. Aligned audio is the most reliable bridge. Export a reference mix too so you can compare the result.",
+        "Choose a common start and end for every file, including silence before late entries. Keep the original Logic project. Print creative sounds you need to preserve and export dry alternatives for decisions you want to remake."
+      ],
+      "steps": [
+        "Save a duplicate Logic project. Write down sample rate, tempo, time signature, and any tempo changes.",
+        "Export tracks as audio files with consistent ranges, 24-bit WAV, and normalization off. Decide explicitly whether processing and automation are included.",
+        "Print instruments or special bus effects you rely on, and retain dry vocal files and a stereo reference. Do not assume aux returns are included in a track export.",
+        "Create a Studio Pro session at the same sample rate, import the aligned files to the same start, and compare against the reference before editing."
+      ],
+      "mistake": "Files that start at each region’s own first sound will not line up when all are dropped at bar one. Verify alignment at both the start and end.",
+      "practice": "Migrate a one-minute excerpt before moving an entire song. Confirm a late ad-lib and the final downbeat land correctly.",
+      "success": "The destination plays in time and you know which sounds are printed versus editable.",
+      "tags": [
+        "logic",
+        "migrate",
+        "migration",
+        "transfer",
+        "stems",
+        "import",
+        "export"
+      ],
+      "sources": [
+        "logic-export"
+      ],
+      "question": "What most reliably preserves alignment during an audio migration?",
+      "options": [
+        "Export every track from a common start",
+        "Trim all starting silence independently",
+        "Normalize every track"
+      ],
+      "answer": 0,
+      "explanation": "A shared origin preserves the timing relationship even for late entries."
+    },
+    {
+      "id": "comping",
+      "chapter": "edit",
+      "title": "Comp for a believable performance",
+      "subtitle": "The best take still needs to sound like one take.",
+      "visual": "comping",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Comping assembles chosen parts of different takes into one performance. Start with a strong main take and replace only what improves the song. Timing, breath, tone, and emotional continuity matter as much as pitch.",
+        "In Studio Pro, expand the layers and select useful ranges to promote into the active performance. Work in phrases first. A perfect word from a dramatically different mic distance may be worse than a slightly imperfect word that belongs."
+      ],
+      "steps": [
+        "Listen through without editing and mark only clear problems.",
+        "Expand the take layers and audition alternate phrases for those moments.",
+        "Build the comp using natural word or breath boundaries. Check transitions in context.",
+        "Keep the source layers and save a version before consolidating or printing the comp."
+      ],
+      "mistake": "A cut in the middle of a vowel often changes tone or pitch abruptly. Move the seam to a quieter boundary when possible.",
+      "practice": "Build one eight-bar comp using no more than five replacements. Listen without looking at the screen.",
+      "success": "You hear one convincing delivery and cannot easily identify the edit points.",
+      "tags": [
+        "comping",
+        "comp",
+        "takes",
+        "layers",
+        "edit",
+        "vocal"
+      ],
+      "sources": [
+        "comping",
+        "v-comp"
+      ],
+      "question": "What is usually the best first comping strategy?",
+      "options": [
+        "Replace every syllable",
+        "Start with a strong full take and repair specific weaknesses",
+        "Always choose the loudest words"
+      ],
+      "answer": 1,
+      "explanation": "A strong base performance preserves continuity and reduces unnecessary editing."
+    },
+    {
+      "id": "fades",
+      "chapter": "edit",
+      "title": "Make clean edits and fades",
+      "subtitle": "Remove the click, keep the breath.",
+      "visual": "edit",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A hard edit can cut a waveform at a discontinuity and create a click. Short fades soften the entry and exit; a crossfade blends overlapping pieces. The right length depends on the material. A fade that fixes a click can also erase a consonant if it is too long.",
+        "Breaths are part of phrasing. You do not need to delete every breath or fill every pause with digital silence. Turn distracting breaths down and preserve the ones that make the performance feel human."
+      ],
+      "steps": [
+        "Zoom in far enough to place an edit accurately, then make a cut at a natural boundary.",
+        "Use event fade handles for a short fade-in or fade-out; start with a few milliseconds and listen.",
+        "Where pieces overlap, use a crossfade and adjust its length until no click or doubled syllable remains.",
+        "Zoom back out and check the whole phrase with the beat."
+      ],
+      "mistake": "Solo listening can tempt you to make an unnaturally silent vocal. Judge most cleanup in the actual arrangement.",
+      "practice": "Create one intentionally bad seam in a practice copy, repair it with fades, and compare before and after.",
+      "success": "The edit is quiet without dulling the beginning of the word.",
+      "tags": [
+        "fade",
+        "fades",
+        "click",
+        "scissors",
+        "edit",
+        "crossfade",
+        "breath"
+      ],
+      "sources": [
+        "v-fades",
+        "comping"
+      ],
+      "question": "What should you check after extending a fade-in?",
+      "options": [
+        "Whether it softened the first consonant too much",
+        "Whether the file name changed",
+        "Whether the tempo doubled"
+      ],
+      "answer": 0,
+      "explanation": "A fade affects performance details, not just clicks."
+    },
+    {
+      "id": "clip-gain",
+      "chapter": "edit",
+      "title": "Even the vocal before compression",
+      "subtitle": "A little preparation makes a better chain.",
+      "visual": "levels",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "One shouted word can drive a compressor much harder than the rest of a line. Clip or event gain lets you reduce that outlier before it reaches the processor. This is different from riding the channel fader after processing.",
+        "Use gain editing for large inconsistencies and fader automation for the final musical relationship with the beat. You are preparing an expressive performance, not making every waveform the same height."
+      ],
+      "steps": [
+        "Listen for words that jump out or vanish before adding a heavy compressor.",
+        "Adjust event gain or a clip-gain curve for the specific phrase or syllable.",
+        "Replay through the compressor and notice whether its reduction is now more consistent.",
+        "Keep meaningful loud/soft contrasts and avoid raising background noise between words."
+      ],
+      "mistake": "Waveform size is a clue, not a loudness verdict. Different vowels can look different while sounding balanced.",
+      "practice": "Prepare four uneven lines with gain moves, then use less compression than before. Compare articulation and energy.",
+      "success": "The compressor reacts more evenly and the performance still breathes.",
+      "tags": [
+        "clip gain",
+        "event gain",
+        "volume",
+        "uneven",
+        "syllable",
+        "compression"
+      ],
+      "sources": [
+        "clip-gain"
+      ],
+      "question": "Why use clip gain before a compressor?",
+      "options": [
+        "To shape what reaches its detector",
+        "To add reverb tails",
+        "To change the sample rate"
+      ],
+      "answer": 0,
+      "explanation": "Upstream gain changes how strongly the compressor reacts."
+    },
+    {
+      "id": "timing",
+      "chapter": "edit",
+      "title": "Tighten the pocket",
+      "subtitle": "Fix distractions without snapping the life away.",
+      "visual": "arrangement",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Rhythmic feel lives around the grid as well as on it. A vocal can lean behind the beat and still feel locked. Judge where a phrase lands against the snare, kick, and bass instead of assuming every syllable should touch a line.",
+        "For doubles, distracting consonant flams often matter more than tiny vowel differences. Move phrases first and use stretching sparingly. Repeatedly stretching a whole vocal to fix one word can damage unrelated material."
+      ],
+      "steps": [
+        "Choose one rhythmic reference in the beat and listen to the vocal against it.",
+        "Identify a phrase that sounds late or early, not merely one that looks off-grid.",
+        "Move or locally edit the smallest useful region. Preserve breaths and neighboring transitions.",
+        "Compare the original at the same level and check the doubles for flams."
+      ],
+      "mistake": "A visually neat waveform arrangement can still sound stiff. Close your eyes for the final decision.",
+      "practice": "Make a tight version and a relaxed version of four bars. Choose the one that makes the groove feel better.",
+      "success": "The phrase lands intentionally and still sounds like you.",
+      "tags": [
+        "timing",
+        "grid",
+        "quantize",
+        "pocket",
+        "align",
+        "double",
+        "stretch"
+      ],
+      "sources": [
+        "v-align"
+      ],
+      "question": "What should guide a vocal timing edit?",
+      "options": [
+        "Its relationship to the groove",
+        "The prettiest waveform spacing",
+        "A rule that every word must start on a beat"
+      ],
+      "answer": 0,
+      "explanation": "Timing choices are musical. The grid is a reference, not a performance."
+    },
+    {
+      "id": "tuning",
+      "chapter": "edit",
+      "title": "Tune with an intention",
+      "subtitle": "Natural control or an audible effect — choose deliberately.",
+      "visual": "eq",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Pitch correction needs a sensible target. A wrong key or scale can pull intentional notes to the wrong place. Spoken or heavily percussive rap may not benefit from the same settings as a sung hook. Start by identifying the melody and listening against the harmonic backing.",
+        "Faster correction can create a stylized, stepped sound; slower correction tends to preserve more transition and drift. Formant controls change vocal character separately from the basic musical pitch. Neither should be adjusted just because the control exists."
+      ],
+      "steps": [
+        "Comp the performance first, keeping a dry original.",
+        "Identify the key from the actual music; verify the proposed notes against the beat rather than trusting one automatic guess.",
+        "Use the pitch tool you own, choose the appropriate input range, and compare a subtle setting with an intentional effect.",
+        "Listen to held notes and slides. Back off when the correction fights the phrase instead of helping it."
+      ],
+      "mistake": "Using the same correction speed on every note can make a nuanced delivery unstable or robotic in the wrong places.",
+      "practice": "Create natural and obviously tuned versions of the same hook. Level-match and write what each version communicates.",
+      "success": "The tuning supports the melody and character without pulling notes to unintended targets.",
+      "tags": [
+        "tuning",
+        "pitch",
+        "autotune",
+        "antares",
+        "melodyne",
+        "formant",
+        "scale",
+        "key"
+      ],
+      "sources": [
+        "v-tune"
+      ],
+      "question": "What should you verify before increasing correction strength?",
+      "options": [
+        "The musical key and intended notes",
+        "The export file extension",
+        "The reverb color"
+      ],
+      "answer": 0,
+      "explanation": "Strong correction toward the wrong notes makes the musical error more obvious."
+    },
+    {
+      "id": "cleanup",
+      "chapter": "edit",
+      "title": "Know what repair can and cannot do",
+      "subtitle": "Remove distractions without sanding off the voice.",
+      "visual": "edit",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Noise reduction, de-clicking, and de-essing solve different problems. A steady fan is not the same as a mouth click, a plosive, or a bright consonant. Name the problem before picking the processor.",
+        "Tools such as iZotope RX can help rescue a take, but strong repair can leave watery, chirping, or dull artifacts. Sometimes moving a mic or recording a line again is faster and more convincing. Keep the original and compare in context."
+      ],
+      "steps": [
+        "Listen to a pause and a loud phrase. Describe the unwanted sound in plain language.",
+        "Try an edit or small gain change before processing the entire file.",
+        "If using repair, target the narrowest useful region and start gently.",
+        "Level-match the result and listen for damage to consonants, room decay, and sustained vowels."
+      ],
+      "mistake": "An impressively silent gap does not prove that the words still sound good. Evaluate the voice while it is present.",
+      "practice": "Repair one mouth click and one noisy pause. Compare the full phrase with the untouched original.",
+      "success": "The distraction is lower without making the vocal sound processed.",
+      "tags": [
+        "noise",
+        "repair",
+        "rx",
+        "izotope",
+        "click",
+        "denoise",
+        "plosive"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What is the best first step in choosing a repair tool?",
+      "options": [
+        "Identify the type of problem",
+        "Apply the strongest denoiser preset",
+        "Remove every breath"
+      ],
+      "answer": 0,
+      "explanation": "Specific problems call for specific tools and often smaller edits."
+    },
+    {
+      "id": "balance",
+      "chapter": "mix",
+      "title": "Build a mix with the faders",
+      "subtitle": "The most powerful move is often the simplest.",
+      "visual": "levels",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Balance is the relationship between parts. If the lyric is buried, first decide whether the vocal is too quiet or the beat is too dominant. An EQ curve is not a substitute for choosing which element leads the song.",
+        "Make an initial balance at a comfortable, fairly quiet playback level. Loud monitoring can make almost anything feel exciting. Return to a consistent volume so you can compare decisions fairly."
+      ],
+      "steps": [
+        "Begin with the lead vocal and the beat, with unnecessary processing bypassed.",
+        "Bring up the lead until every important lyric reads. Then adjust the beat around it.",
+        "Add doubles, ad-libs, and effects one role at a time, keeping the lead as your anchor.",
+        "Listen at a quieter level, then briefly on another playback device. Fix balance before adding polish."
+      ],
+      "mistake": "If every element is made louder to compete, the mix eventually just overloads. Lower competing parts when appropriate.",
+      "practice": "Make a 60-second balance using only faders and pan. Export it as a baseline for later comparisons.",
+      "success": "The song communicates before any elaborate processing is added.",
+      "tags": [
+        "balance",
+        "volume",
+        "fader",
+        "buried",
+        "beat",
+        "vocal",
+        "mix"
+      ],
+      "sources": [
+        "console"
+      ],
+      "question": "Before boosting vocal treble to fix a buried lyric, what should you assess?",
+      "options": [
+        "The vocal-to-beat balance",
+        "The app theme",
+        "The bit depth of your notes"
+      ],
+      "answer": 0,
+      "explanation": "A level relationship can be the real issue; tonal processing may be unnecessary."
+    },
+    {
+      "id": "eq",
+      "chapter": "mix",
+      "title": "Hear what an EQ move is doing",
+      "subtitle": "Frequency, gain, and width have different jobs.",
+      "visual": "eq",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Frequency chooses where a move is centered, gain chooses how much boost or cut, and Q controls how concentrated a bell is. A broad small move can reshape tone; a narrow move can address a clearly heard resonance.",
+        "Listen in the beat. A vocal that sounds huge alone can crowd the bass and keys; a soloed vocal that seems slightly lean can sit beautifully in the record. The aim is useful separation, not a perfect-looking curve."
+      ],
+      "steps": [
+        "Name a problem: rumble, too much low-mid weight, a harsh vowel, or insufficient clarity.",
+        "In Pro EQ or Pro-Q, use a small move with an appropriate shape and listen in context.",
+        "Bypass at similar loudness so a louder processed version does not win automatically.",
+        "Keep the band only if you can describe the audible improvement."
+      ],
+      "mistake": "Sweeping an extreme boost makes almost every frequency sound offensive. Use that technique cautiously, then judge a modest cut in context.",
+      "practice": "Make no more than three EQ moves on a vocal. Write one reason for each; remove any you cannot justify.",
+      "success": "You can predict which part of the voice a band changes before turning it on.",
+      "tags": [
+        "eq",
+        "equalizer",
+        "frequency",
+        "q",
+        "bell",
+        "muddy",
+        "harsh",
+        "tone"
+      ],
+      "sources": [
+        "proq-bands"
+      ],
+      "question": "Which control mainly changes the width of a bell band?",
+      "options": [
+        "Q",
+        "Pan",
+        "Sample rate"
+      ],
+      "answer": 0,
+      "explanation": "Q determines how narrow or broad the bell is around its center."
+    },
+    {
+      "id": "low-cut",
+      "chapter": "mix",
+      "title": "Low cut means high pass",
+      "subtitle": "Find the right shape in Pro-Q without guessing.",
+      "visual": "eq",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A high-pass filter lets higher frequencies pass while reducing lower ones. FabFilter calls this shape Low Cut. A low shelf is different: it lowers or raises a broad low range without necessarily removing everything below the corner.",
+        "Start low and move the cutoff upward while the beat plays. Listen for reduced rumble, then for the point where the voice loses weight. Back off from that point. There is no universal vocal cutoff; the source and arrangement decide."
+      ],
+      "steps": [
+        "Create or select a band in Pro-Q and set its shape to Low Cut.",
+        "Begin around the lowest unwanted rumble, using a moderate slope such as 12 dB/oct as an experiment.",
+        "Raise the cutoff gradually while listening to the lower body of the voice.",
+        "Compare bypassed and active, then try a gentler setting if the voice has become thin."
+      ],
+      "mistake": "A steep filter can alter the transient and phase response. Steeper is not automatically cleaner or more professional.",
+      "practice": "Compare Low Cut with a low-shelf reduction on the same vocal. Notice when one solves the problem with less loss of body.",
+      "success": "You can choose the shape by its function rather than its icon.",
+      "tags": [
+        "high pass",
+        "highpass",
+        "low cut",
+        "pro q",
+        "fabfilter",
+        "filter",
+        "rumble"
+      ],
+      "sources": [
+        "proq-bands",
+        "proq-mode"
+      ],
+      "question": "In Pro-Q, which shape performs a high-pass function?",
+      "options": [
+        "Low Cut",
+        "Low Shelf",
+        "High Cut"
+      ],
+      "answer": 0,
+      "explanation": "Low Cut removes low-frequency content and passes the higher range."
+    },
+    {
+      "id": "compression",
+      "chapter": "mix",
+      "title": "Compress for consistency",
+      "subtitle": "Threshold starts the action; timing shapes the feeling.",
+      "visual": "dynamics",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A compressor turns down signal according to a detector and settings. Threshold sets where gain reduction begins; ratio sets how strongly level above that region is controlled. Attack and release shape the response over time. Makeup gain brings the result back up afterward.",
+        "For a vocal experiment, try a moderate ratio around 3:1, an attack in the tens of milliseconds, and a release that recovers naturally between phrases. These are starting points. Watch reduction and listen; the displayed numbers are not a recipe for every voice."
+      ],
+      "steps": [
+        "Even large level outliers with clip gain first.",
+        "Lower the compressor threshold until louder words are controlled without flattening every syllable.",
+        "Compare faster and slower attack while listening to consonant impact; adjust release to avoid distracting pumping.",
+        "Match output loudness to bypass and decide whether the voice is easier to follow."
+      ],
+      "mistake": "If the processed version is simply louder, you have not proved that compression improved it.",
+      "practice": "Use the compression lab, then compare two real vocal settings: one clearly overdone and one restrained. Identify the audible difference.",
+      "success": "The vocal stays present and expressive, with no unexplained pumping or crushed diction.",
+      "tags": [
+        "compression",
+        "compressor",
+        "threshold",
+        "ratio",
+        "attack",
+        "release",
+        "pro c"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "At an ideal 4:1 ratio, 8 dB above the threshold becomes how much above it?",
+      "options": [
+        "2 dB",
+        "8 dB",
+        "32 dB"
+      ],
+      "answer": 0,
+      "explanation": "Eight divided by four is two. Timing and knee can change real-time behavior."
+    },
+    {
+      "id": "deess",
+      "chapter": "mix",
+      "title": "Control sharp consonants",
+      "subtitle": "Treat the “S” without losing the whole voice.",
+      "visual": "eq",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Sibilance is the sharp energy in sounds such as S, SH, and sometimes T. Its frequency varies with the singer and microphone. A de-esser reacts to that energy; it should not darken every vowel just because the vocal is bright.",
+        "Start with careful recording and reasonable EQ. Boosting air heavily and then aggressively de-essing can create a cycle of undoing your own decisions. If one isolated consonant is the problem, a gain edit can be cleaner."
+      ],
+      "steps": [
+        "Find a phrase containing both bright consonants and sustained vowels.",
+        "Use a de-esser such as Pro-DS or your available equivalent; listen to its detection or audition function if provided.",
+        "Adjust sensitivity so reduction mainly follows the troublesome consonants.",
+        "Compare full phrases with the beat and listen for a lisp, dullness, or disappearing endings."
+      ],
+      "mistake": "A de-esser that sounds smooth on one aggressive word can be too strong for the rest of the performance.",
+      "practice": "Fix one harsh S with gain editing and another with de-essing. Compare which intervention is least noticeable.",
+      "success": "The consonants remain intelligible without jumping painfully out of the mix.",
+      "tags": [
+        "deess",
+        "de esser",
+        "sibilance",
+        "sss",
+        "sharp",
+        "harsh",
+        "pro ds"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What is a sign of excessive de-essing?",
+      "options": [
+        "A lisp or lost consonants",
+        "A clearer song title",
+        "More accurate tempo"
+      ],
+      "answer": 0,
+      "explanation": "Over-reduction can erase the very sounds that make speech intelligible."
+    },
+    {
+      "id": "vocal-chain",
+      "chapter": "mix",
+      "title": "Give every plug-in a job",
+      "subtitle": "Use the tools you own without using all of them.",
+      "visual": "signal",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A useful chain is an ordered set of decisions. A practical starting sequence might be corrective EQ, compression, de-essing where needed, and optional color. Reverb and delay often live on separate sends. Change the order when the sound gives you a reason.",
+        "Your stock tools can handle the fundamentals. Pro-Q can shape tone, your compressor can control dynamics, and saturation can add texture. Soothe can reduce moving resonances when used carefully. iZotope, UAD, Antares, and LANDR are choices, not mandatory stages."
+      ],
+      "steps": [
+        "Write a one-sentence job for each insert before loading it.",
+        "Build one processor at a time and compare at similar loudness.",
+        "If compression brings sharp consonants forward, revisit de-essing placement or intensity.",
+        "Save a useful chain as a starting point, then retune it for every recording."
+      ],
+      "mistake": "Stacking processors that solve the same problem can quietly remove clarity and expression. Remove any stage you cannot hear helping.",
+      "practice": "Take an existing vocal chain and bypass one plug-in at a time. Keep only the ones with a clear audible purpose.",
+      "success": "You can explain the chain in plain language and it still sounds good with fewer distractions.",
+      "tags": [
+        "chain",
+        "plugins",
+        "soothe",
+        "izotope",
+        "uad",
+        "landr",
+        "fabfilter",
+        "antares",
+        "stock"
+      ],
+      "sources": [
+        "routing",
+        "v-stock"
+      ],
+      "question": "When should you add another processor?",
+      "options": [
+        "When it solves an identified audible problem or creative goal",
+        "Because an influencer uses ten",
+        "Whenever an insert slot is empty"
+      ],
+      "answer": 0,
+      "explanation": "A processor earns its place by improving this recording, not by being available."
+    },
+    {
+      "id": "stereo-mono",
+      "chapter": "mix",
+      "title": "Make width survive mono",
+      "subtitle": "A wide mix still needs a strong center.",
+      "visual": "stereo",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Panning places different signals across the stereo field. Time and phase differences can create width too, but some widening techniques cancel when left and right are combined. A mix that disappears in mono is not simply more spacious.",
+        "Keep the lead and important low-end relationships stable. Use the sides for supporting performances and ambience when it helps the arrangement. Test the whole mix, because a beautiful soloed stereo effect may fight the vocal once everything returns."
+      ],
+      "steps": [
+        "Build a useful balance with the main vocal anchored near the center.",
+        "Pan true doubles and supporting parts to make room rather than widening everything.",
+        "Switch the monitoring output to mono and compare at a reasonable matched level.",
+        "If a part collapses, reduce stereo timing tricks, check polarity relationships, or choose a different texture."
+      ],
+      "mistake": "A duplicated track with a tiny delay can sound wide and still create comb filtering. Treat it as an effect with a tradeoff.",
+      "practice": "Listen to a hook in stereo, mono, and through one small speaker. Note what changes in lyric intelligibility.",
+      "success": "The hook keeps its meaning and essential energy on narrow playback.",
+      "tags": [
+        "stereo",
+        "mono",
+        "width",
+        "phase",
+        "pan",
+        "correlation",
+        "cancel"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "Why check mono?",
+      "options": [
+        "To reveal cancellation and judge the core balance",
+        "To make every mix permanently mono",
+        "To increase sample rate"
+      ],
+      "answer": 0,
+      "explanation": "Mono is a practical translation check, especially after widening effects."
+    },
+    {
+      "id": "sends",
+      "chapter": "space",
+      "title": "Inserts, buses, and sends",
+      "subtitle": "Three routing ideas that unlock the mixer.",
+      "visual": "signal",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "An insert processes a channel in sequence. A send creates an additional route to another channel. A bus combines sources so you can treat them as a group. These are signal-flow jobs, not competing names for the same thing.",
+        "For shared ambience, keep the dry vocal on its normal path and send some of it to an FX channel. Set the reverb or delay there fully wet so the original dry sound is not unintentionally duplicated. The send controls the feed; the return fader controls the processed output."
+      ],
+      "steps": [
+        "Locate the lead channel’s Inserts and Sends areas in the Console.",
+        "Create an FX channel containing a delay, then add a send from the lead to that FX channel.",
+        "Set the effect’s mix to 100% wet and bring up the send gently.",
+        "Mute the send and then the return separately. Listen to which action stops new input and which cuts the effect output."
+      ],
+      "mistake": "A partly dry effect on a parallel return can change the original level and obscure what the send is doing.",
+      "practice": "Create one shared reverb for lead and doubles with different send amounts. Keep the return at a stable level.",
+      "success": "You can follow both the direct sound and the effect path without guessing.",
+      "tags": [
+        "send",
+        "sends",
+        "bus",
+        "insert",
+        "fx",
+        "wet",
+        "dry",
+        "routing"
+      ],
+      "sources": [
+        "routing"
+      ],
+      "question": "For a conventional parallel reverb return, where should the reverb mix begin?",
+      "options": [
+        "100% wet",
+        "100% dry",
+        "Always 50/50"
+      ],
+      "answer": 0,
+      "explanation": "The source channel already carries the dry sound; the return supplies the effect."
+    },
+    {
+      "id": "delay-throw",
+      "chapter": "space",
+      "title": "Throw the last word into space",
+      "subtitle": "Automate the send. Let the tail finish.",
+      "visual": "automation",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A throw highlights a chosen word or phrase with an echo. The dry lead stays stable while only that moment feeds the delay. It is a rhythmic response to the lyric, not a wash over the entire verse.",
+        "Start with a tempo-synced quarter or eighth note, modest feedback, and a return that does not compete with the next line. Darkening or thinning the repeat can separate it from the main voice. There is no correct wet level until you hear it in the song."
+      ],
+      "steps": [
+        "Create a delay FX return at 100% wet and a send from the lead.",
+        "Expose that send’s level as an automation parameter. Draw points at silence before the target word, up through the word, and back down afterward.",
+        "Set the automation to Read and play from before the phrase so the initial state is established.",
+        "Adjust the rise timing, send amount, and feedback until the response finishes musically. Leave the return active so the existing tail can decay."
+      ],
+      "mistake": "Automating the return mute or delay bypass can cut off the tail. Automating an insert’s dry/wet mix can also change the lead itself.",
+      "practice": "Create three different throws across a verse: one short, one syncopated, and one final long answer. Keep the rest comparatively dry.",
+      "success": "Only the intended word repeats, and the next lyric remains clear.",
+      "tags": [
+        "throw",
+        "delay",
+        "throws",
+        "echo",
+        "last word",
+        "automate",
+        "send"
+      ],
+      "sources": [
+        "automation",
+        "editing-automation",
+        "v-throw"
+      ],
+      "question": "Which parameter is a useful first choice for a clean vocal delay throw?",
+      "options": [
+        "The send level feeding the delay",
+        "The dry vocal pan for the whole song",
+        "The return mute throughout the tail"
+      ],
+      "answer": 0,
+      "explanation": "Controlling the feed selects the word while allowing the delay already inside the effect to decay."
+    },
+    {
+      "id": "reverb",
+      "chapter": "space",
+      "title": "Choose depth, not fog",
+      "subtitle": "Size, decay, and pre-delay tell different stories.",
+      "visual": "space",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Reverb suggests a space around the sound. Decay describes how long it lingers; pre-delay creates a gap before the reverberant response; tone shapes how bright or dark that space feels. A short room and a long plate can communicate very different distances.",
+        "Start with the vocal’s role. An intimate lead often needs less obvious ambience than a distant ad-lib. Pre-delay can preserve the initial articulation, but too much can sound like a separate echo. Judge against the rhythm."
+      ],
+      "steps": [
+        "Create a fully wet reverb return and feed it quietly from the lead.",
+        "Choose a short, restrained space first and raise it until you hear what it adds.",
+        "Adjust decay and pre-delay while checking consonants and the gaps between lines.",
+        "Filter the return if its low end muddies the beat or its brightness exaggerates S sounds."
+      ],
+      "mistake": "A soloed lush reverb can swallow the song. Set the amount with the full arrangement playing.",
+      "practice": "Compare a close verse and a deeper hook using the same dry vocal. Change the ambience, not the lead’s fundamental balance.",
+      "success": "The voice sits in a space without losing the words.",
+      "tags": [
+        "reverb",
+        "predelay",
+        "decay",
+        "plate",
+        "room",
+        "wet",
+        "fog"
+      ],
+      "sources": [
+        "v-reverb"
+      ],
+      "question": "What does pre-delay mainly change?",
+      "options": [
+        "The gap before the reverberant response",
+        "The singer’s pitch",
+        "The recording bit depth"
+      ],
+      "answer": 0,
+      "explanation": "That gap can help separate the direct articulation from the surrounding space."
+    },
+    {
+      "id": "automation",
+      "chapter": "space",
+      "title": "Make automation predictable",
+      "subtitle": "Draw a move, read it back, keep control.",
+      "visual": "automation",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Automation stores a parameter’s value over time. Read plays back the curve. Touch writes while you manipulate the control and then returns toward existing automation. Latch continues writing the last value after release until playback stops. Write can overwrite throughout playback.",
+        "For your first moves, draw a simple curve and use Read. Add points before and after the change so it returns to a known baseline. The parameter you choose determines what changes: channel volume, send level, or a plug-in’s mix are different operations."
+      ],
+      "steps": [
+        "Choose one parameter and reveal its automation lane.",
+        "Place a baseline point before the section, points defining the move, and a return point afterward.",
+        "Use Read and replay from earlier in the song to hear the full behavior.",
+        "If recording live moves with Touch or Latch, return to Read afterward and inspect the curve."
+      ],
+      "mistake": "Leaving Write or Latch active can replace a carefully drawn section on the next pass.",
+      "practice": "Draw a 1–2 dB lift into a hook, then a separate delay-send throw. Explain which signal each curve controls.",
+      "success": "The move happens in the same place on repeated playback and returns to the intended value.",
+      "tags": [
+        "automation",
+        "read",
+        "touch",
+        "latch",
+        "write",
+        "curve",
+        "envelope",
+        "mix"
+      ],
+      "sources": [
+        "automation-modes",
+        "editing-automation"
+      ],
+      "question": "Which mode is the safest default for replaying existing automation without writing new moves?",
+      "options": [
+        "Read",
+        "Write",
+        "Latch"
+      ],
+      "answer": 0,
+      "explanation": "Read follows the stored values rather than recording control changes."
+    },
+    {
+      "id": "ducking",
+      "chapter": "space",
+      "title": "Let effects move around the vocal",
+      "subtitle": "Space can bloom when the lyric pauses.",
+      "visual": "dynamics",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "Ducking lowers one sound while another is present. For a vocal reverb or delay, put compression on the effect return and let the dry voice drive the detector through a sidechain. The effect gets quieter during the line and returns in the gaps.",
+        "The sidechain is a control signal. It need not become audible in the return itself. Release timing determines whether the effect comes back naturally or swells in a distracting way."
+      ],
+      "steps": [
+        "Begin with an existing wet effect return that sounds good on its own.",
+        "Insert a sidechain-capable compressor after the effect and enable its external detector input.",
+        "Route a controlled feed from the dry vocal to that sidechain, keeping the normal vocal and FX paths intact.",
+        "Adjust threshold and release until the words read clearly and the ambience returns smoothly between them."
+      ],
+      "mistake": "Over-ducking can create an obvious sucking sensation. Use the smallest reduction that solves the masking.",
+      "practice": "Compare a static return against a gently ducked one at similar average loudness. Listen especially to the space after the last word.",
+      "success": "The effect supports the vocal and emerges naturally in its gaps.",
+      "tags": [
+        "duck",
+        "ducking",
+        "sidechain",
+        "reverb",
+        "delay",
+        "masking"
+      ],
+      "sources": [
+        "routing",
+        "v-duck"
+      ],
+      "question": "What does the external sidechain primarily supply to the compressor?",
+      "options": [
+        "A signal that controls its gain reduction",
+        "A new song tempo",
+        "A mandatory audible harmony"
+      ],
+      "answer": 0,
+      "explanation": "The detector listens to the sidechain to decide how the return should be controlled."
+    },
+    {
+      "id": "creative-fx",
+      "chapter": "space",
+      "title": "Design a signature vocal moment",
+      "subtitle": "One memorable contrast can carry a section.",
+      "visual": "stereo",
+      "level": "Intermediate",
+      "minutes": 8,
+      "concepts": [
+        "A signature effect works because of where it appears and what surrounds it. A filtered whisper, distorted reply, pitched double, or abrupt dry moment can feel more original than a large permanent chain. Contrast creates impact.",
+        "Use references to describe a quality: intimate, grainy, unstable, spacious, clipped, or playful. Then translate that quality into a controllable experiment on your own performance. You are building a vocabulary, not copying someone’s entire identity."
+      ],
+      "steps": [
+        "Pick one phrase that deserves a change and duplicate it to a clearly labeled effects track.",
+        "Try one main transformation: filtering, saturation, pitch/formant change, or rhythmic repeats.",
+        "Blend it with the lead and automate when it enters and leaves.",
+        "Print an alternate version once it works, preserving the dry source and an editable copy."
+      ],
+      "mistake": "An effect that is exciting for four seconds can become tiring for an entire verse. Use the arrangement as a control.",
+      "practice": "Make three one-line responses: intimate and dry, grainy and narrow, then airy and distant. Choose the one that adds meaning.",
+      "success": "The effect makes the phrase more memorable without obscuring the lyric or swallowing the next section.",
+      "tags": [
+        "creative",
+        "texture",
+        "saturation",
+        "formant",
+        "signature",
+        "adlib",
+        "osquinn",
+        "isaiah",
+        "idk"
+      ],
+      "sources": [
+        "v-creative"
+      ],
+      "question": "Why can a brief effect feel stronger than the same effect running constantly?",
+      "options": [
+        "Contrast gives it a clear role",
+        "It uses a higher sample rate",
+        "Short effects always need more gain"
+      ],
+      "answer": 0,
+      "explanation": "The surrounding untreated sound helps the change register as an event."
+    },
+    {
+      "id": "rhythm",
+      "chapter": "create",
+      "title": "Build a pocket before a pattern",
+      "subtitle": "Timing and empty space are musical material.",
+      "visual": "arrangement",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A drum pattern is a set of relationships: what repeats, what surprises, and what leaves room for the voice. Begin with an anchor, such as the snare, then decide how the kick and hats support the phrasing. Faster subdivisions do not automatically create more energy.",
+        "Velocity, note placement, and sound choice interact. A hat pattern can feel mechanical when every hit has the same emphasis. Small intentional variations are useful; randomizing everything can destroy the groove."
+      ],
+      "steps": [
+        "Start a short loop with a clear backbeat and a simple kick pattern.",
+        "Add hats that imply movement without filling every available subdivision.",
+        "Change the strength of selected hits and compare straight timing with a little swing.",
+        "Rap or hum over the loop. Remove hits that constantly interrupt your phrase endings."
+      ],
+      "mistake": "A busy soloed beat can leave no space for the record’s main performance. Compose with the vocal role in mind.",
+      "practice": "Make two versions of an eight-bar groove: one with fewer notes, one with more. Record a rough vocal over both before choosing.",
+      "success": "The groove supports a convincing performance rather than competing with it.",
+      "tags": [
+        "rhythm",
+        "drum",
+        "beat",
+        "pattern",
+        "swing",
+        "velocity",
+        "groove"
+      ],
+      "sources": [
+        "v-patterns"
+      ],
+      "question": "What is a useful test for a drum pattern intended for a rap song?",
+      "options": [
+        "Perform over it",
+        "Count plug-ins on the drum bus",
+        "Make every hat equally loud"
+      ],
+      "answer": 0,
+      "explanation": "The pattern needs to work with the performance it is supporting."
+    },
+    {
+      "id": "midi",
+      "chapter": "create",
+      "title": "Understand MIDI and instruments",
+      "subtitle": "A note instruction is not a recording of sound.",
+      "visual": "arrangement",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "MIDI describes musical events such as note, timing, velocity, and controller movement. A virtual instrument turns those instructions into audio. An audio recording stores the resulting waveform. This is why changing an instrument can transform a MIDI part without rerecording the notes.",
+        "Velocity often changes both loudness and timbre, depending on the instrument. A note’s visible length and the sound’s release are different things: a short note can still ring after its note-off."
+      ],
+      "steps": [
+        "Create an instrument track and load a simple sound from the Browser.",
+        "Play or draw a short phrase, then vary one note’s velocity.",
+        "Open the note editor and change pitch, timing, and length separately so you hear their distinct effects.",
+        "Save the editable part and render an audio version only when you need portability or reduced processing load."
+      ],
+      "mistake": "Exporting MIDI alone does not preserve a special synthesizer sound. Keep a rendered audio reference when that sound matters.",
+      "practice": "Use the same four notes with a piano-like sound, a soft pad, and a short pluck. Notice which note lengths need to change.",
+      "success": "You can distinguish the performance data from the sound generator and the rendered audio.",
+      "tags": [
+        "midi",
+        "instrument",
+        "notes",
+        "keyboard",
+        "velocity",
+        "render"
+      ],
+      "sources": [
+        "v-instruments"
+      ],
+      "question": "What does a MIDI file usually preserve?",
+      "options": [
+        "Note and performance instructions",
+        "Every plug-in’s exact audio output",
+        "The microphone’s room reflections"
+      ],
+      "answer": 0,
+      "explanation": "The instrument that interprets those instructions determines the resulting sound."
+    },
+    {
+      "id": "harmony",
+      "chapter": "create",
+      "title": "Find a small harmonic world",
+      "subtitle": "You can write a song before learning every chord.",
+      "visual": "arrangement",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A key gives a piece a tonal center, but songs can borrow notes and chords outside a simple scale. Begin by hearing where the music feels settled. A chord is a collection of pitches; an inversion changes which chord tone sits lowest without changing the basic note set.",
+        "Use a small palette and explore rhythm, register, and voice leading. Moving one inner note can be more expressive than adding several new chords. Theory is a language for noticing relationships, not permission to make music."
+      ],
+      "steps": [
+        "Choose a simple instrument and find a tonal center by ear against the beat.",
+        "Build a short progression with two to four chords and listen for tension and return.",
+        "Move the same chords into different registers or inversions to reduce awkward leaps.",
+        "Sing a simple melody before adding extra layers, then verify that it fits the intended harmony."
+      ],
+      "mistake": "An automatic key label is a suggestion to verify. A loop may be ambiguous, borrowed, or tuned away from standard pitch.",
+      "practice": "Write three melodies over the same progression using only a few notes. Change rhythm and contour more than complexity.",
+      "success": "You can hear the home note and explain why a phrase feels resolved or unfinished.",
+      "tags": [
+        "harmony",
+        "key",
+        "chord",
+        "scale",
+        "inversion",
+        "melody",
+        "theory"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What changes when you invert a basic chord?",
+      "options": [
+        "The ordering of its chord tones",
+        "Its sample rate",
+        "Every note automatically moves to a new key"
+      ],
+      "answer": 0,
+      "explanation": "Inversions change voicing and bass position while preserving the basic chord-tone set."
+    },
+    {
+      "id": "arrangement",
+      "chapter": "create",
+      "title": "Make the hook feel earned",
+      "subtitle": "Energy is more than loudness.",
+      "visual": "arrangement",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Arrangement is the order and interaction of musical ideas. A hook can feel bigger because the verse withheld something: a double, a bass layer, a higher register, a wider texture, or a rhythmic accent. Turning up the master is rarely the most interesting contrast.",
+        "Think in sections with clear jobs. The intro invites, the verse develops, the hook states, and a bridge or break changes perspective. Those are possibilities rather than a mandatory formula."
+      ],
+      "steps": [
+        "Mark the sections of your song and write each section’s role.",
+        "Identify the strongest hook feature and remove competing versions of it from earlier sections.",
+        "Create a transition with a small omission, fill, breath, or effect tail.",
+        "Listen from the end of the verse through the hook without stopping or soloing."
+      ],
+      "mistake": "A hook that only works when auditioned by itself may not have enough contrast with the section before it.",
+      "practice": "Make a hook lift by changing only three arrangement elements while keeping the master fader fixed.",
+      "success": "You feel a section change before looking at a marker or noticing a volume jump.",
+      "tags": [
+        "arrangement",
+        "hook",
+        "verse",
+        "bridge",
+        "transition",
+        "energy",
+        "section"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "Which can make a hook feel larger without increasing the master level?",
+      "options": [
+        "Adding a contrast that the verse intentionally withheld",
+        "Renaming the master channel",
+        "Duplicating the exact full mix"
+      ],
+      "answer": 0,
+      "explanation": "The relationship between sections creates the lift."
+    },
+    {
+      "id": "sampling",
+      "chapter": "create",
+      "title": "Turn a sound into an idea",
+      "subtitle": "Choose, trim, transform, and make room.",
+      "visual": "edit",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A sample becomes useful through context. A small fragment can supply a rhythm, a texture, or a melodic seed. Trimming its start changes feel; envelope and filtering change its role; repitching changes both character and sometimes duration, depending on the playback mode.",
+        "Practice with your own recordings or material you have permission to use. Keep a note of where each source came from so a promising sketch does not become confusing when it is time to release."
+      ],
+      "steps": [
+        "Record a short original sound: a spoken syllable, a tap, or a room texture.",
+        "Trim to the useful section and apply fades so playback is clean.",
+        "Load it into a sampler or arrange the audio directly, then make a simple rhythmic idea.",
+        "Change only one parameter at a time and save the version that inspires a performance."
+      ],
+      "mistake": "Transformation alone does not establish permission to release someone else’s recording. Keep source provenance alongside the session.",
+      "practice": "Make a four-bar texture from your own voice without using the original words as a recognizable lead.",
+      "success": "The sound has a specific role and its source is documented.",
+      "tags": [
+        "sample",
+        "sampling",
+        "chop",
+        "sampler",
+        "sampleone",
+        "texture"
+      ],
+      "sources": [
+        "v-sample"
+      ],
+      "question": "What is a useful habit when collecting samples?",
+      "options": [
+        "Keep a source and permission note",
+        "Assume a short clip has no owner",
+        "Discard the original source immediately"
+      ],
+      "answer": 0,
+      "explanation": "Good provenance makes later decisions and collaboration much easier."
+    },
+    {
+      "id": "references",
+      "chapter": "create",
+      "title": "Study a reference without chasing it",
+      "subtitle": "Translate admiration into decisions.",
+      "visual": "stereo",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A useful reference answers a specific question. Is the lead close or distant? Are doubles audible or only felt? How much silence surrounds the drums? What changes when the hook arrives? These observations are more actionable than make it sound like this artist.",
+        "Match playback loudness before comparing. A mastered reference can easily seem better just because it is louder. Listen to one feature at a time and adapt the principle to your voice and arrangement."
+      ],
+      "steps": [
+        "Choose two references that share one quality you want, rather than one supposedly perfect target.",
+        "Lower the references to a comparable perceived loudness.",
+        "Write observations about vocal placement, low end, space, and section changes.",
+        "Try one related decision in your own song, then judge whether it serves your performance."
+      ],
+      "mistake": "Exact settings from someone else’s session do not recreate their voice, room, recording, or arrangement.",
+      "practice": "Make a reference note with three observations and three original experiments for your own song.",
+      "success": "You can describe a desired sonic quality without relying on an artist’s name.",
+      "tags": [
+        "reference",
+        "isaiah rashad",
+        "osquinn",
+        "idk",
+        "inspiration",
+        "style",
+        "unique"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "Why level-match a reference before comparison?",
+      "options": [
+        "Louder playback can bias the judgment",
+        "It changes the song’s key",
+        "It removes all mastering"
+      ],
+      "answer": 0,
+      "explanation": "Comparable loudness makes tonal and arrangement differences easier to judge fairly."
+    },
+    {
+      "id": "mix-review",
+      "chapter": "finish",
+      "title": "Review a mix without chasing your tail",
+      "subtitle": "Separate observations from fixes.",
+      "visual": "stereo",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A useful review is a fresh listen with a short list. Write what you hear before touching controls. Group notes by priority: performance, arrangement, balance, tone, space, then polish. Solving a higher-level issue can eliminate several smaller ones.",
+        "Use a consistent reference volume and more than one realistic playback context. A small speaker helps reveal midrange balance; headphones reveal detail; mono can expose cancellation. No single device is the final judge."
+      ],
+      "steps": [
+        "Export a rough mix and step away from the session.",
+        "Listen through once without stopping. Mark timestamps and plain-language problems.",
+        "Choose the three changes with the largest musical benefit and make only those.",
+        "Export a new version and compare against the old one at similar loudness."
+      ],
+      "mistake": "Changing ten things at once makes it hard to know which move helped. Keep a previous version and a reason for each revision.",
+      "practice": "Run a three-note review on one song. Fix the notes, then stop and compare before creating more work.",
+      "success": "Each revision has an audible purpose and the song becomes clearer rather than merely different.",
+      "tags": [
+        "review",
+        "revision",
+        "translation",
+        "reference",
+        "car test",
+        "headphones"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What is a useful review note?",
+      "options": [
+        "At 0:42 the last word is buried under the snare",
+        "Needs more professional",
+        "Use more plug-ins"
+      ],
+      "answer": 0,
+      "explanation": "A specific observation leads to a testable change."
+    },
+    {
+      "id": "premaster",
+      "chapter": "finish",
+      "title": "Prepare a clean premaster",
+      "subtitle": "Give the next stage room to work.",
+      "visual": "export",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A premaster is a finished mix prepared for mastering. Its job is to preserve your musical decisions while avoiding accidental overload or unnecessary delivery processing. There is no magic peak target that substitutes for a good mix.",
+        "If a limiter is only making a preview loud, export a version without that loudness stage. If bus processing is integral to the sound, keep it and communicate what it does. Preserve both an approved reference and the clean working export when useful."
+      ],
+      "steps": [
+        "Check the full arrangement, fades, and effect tails before export.",
+        "Inspect the Main path for clipping, accidental solo states, and preview-only processing.",
+        "Export a high-quality PCM file at the session sample rate, commonly 24-bit WAV, with no unrequested normalization.",
+        "Listen to the exported file from beginning to end and note its version and processing state."
+      ],
+      "mistake": "Turning down the final fader does not undo distortion already created earlier in the signal chain.",
+      "practice": "Export a clean premaster and a louder reference from the same mix. Label both clearly so they cannot be confused.",
+      "success": "The delivered file is complete, clean, and accurately labeled.",
+      "tags": [
+        "premaster",
+        "headroom",
+        "master",
+        "limiter",
+        "clean",
+        "wav"
+      ],
+      "sources": [
+        "mixdown"
+      ],
+      "question": "What is more useful than chasing one exact premaster peak number?",
+      "options": [
+        "A clean mix with intentional processing and clear delivery settings",
+        "Clipping every bus then lowering Main",
+        "Normalizing every stem separately"
+      ],
+      "answer": 0,
+      "explanation": "A mastering workflow needs an intact mix and known processing, not an arbitrary meter ritual."
+    },
+    {
+      "id": "loudness",
+      "chapter": "finish",
+      "title": "Understand loudness without worshiping a number",
+      "subtitle": "LUFS, peaks, and the feel of the record.",
+      "visual": "levels",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Peak level describes the largest momentary excursions; loudness measurements describe aspects of perceived level over time. Integrated LUFS summarizes an entire program, while short-term measurements help you compare sections. True-peak estimation considers peaks that can occur between samples during reconstruction.",
+        "Streaming normalization is playback behavior, not one universal mastering target. A dense mix and a sparse mix can share an integrated reading and still feel different. Preserve transients and emotional contrast instead of crushing the record to satisfy a screenshot."
+      ],
+      "steps": [
+        "Compare your mix and reference at similar perceived loudness.",
+        "Add final limiting gently if needed and listen to kick impact, bass sustain, consonants, and distortion.",
+        "Measure the complete exported file, not only the loudest loop.",
+        "Check the destination’s current delivery guidance when releasing; keep a high-quality master and a documented version."
+      ],
+      "mistake": "An impressive loudness number can hide a smaller, flatter-sounding record. Turn the loud version down and compare again.",
+      "practice": "Create two limiting intensities and match their playback level. Choose by impact and clarity rather than which is loudest.",
+      "success": "You can distinguish loudness from quality and identify when limiting costs too much.",
+      "tags": [
+        "lufs",
+        "loudness",
+        "true peak",
+        "mastering",
+        "limiter",
+        "normalization"
+      ],
+      "sources": [
+        "v-master"
+      ],
+      "question": "If one master is louder, what should you do before deciding it sounds better?",
+      "options": [
+        "Match perceived playback level",
+        "Increase its limiter again",
+        "Ignore the quiet version"
+      ],
+      "answer": 0,
+      "explanation": "Level matching helps expose the musical tradeoff rather than rewarding simple gain."
+    },
+    {
+      "id": "export",
+      "chapter": "finish",
+      "title": "Export the file you intended",
+      "subtitle": "Range, format, tails, and the final listen.",
+      "visual": "export",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Export is part of production. The wrong range can cut off an intro or tail; a muted group can remove a part; a forgotten solo can turn a full mix into a stem. Name the intended deliverable before opening the dialog.",
+        "In Studio Pro, use Session > Export Mixdown for a finished mix. Choose the correct output and a range that includes the actual ending. Keep a lossless version for further work; make compressed copies when they suit the sharing destination."
+      ],
+      "steps": [
+        "Clear unintended solo and mute states and verify the Main output.",
+        "Set start and end deliberately, leaving time for reverb and delay to finish.",
+        "Choose stereo WAV and suitable resolution for your workflow, then give the file a versioned name.",
+        "Open the rendered file outside the DAW and check the first second, the loudest section, and the full ending."
+      ],
+      "mistake": "A session that plays correctly does not prove the export settings are correct. Listen to the file you will actually use.",
+      "practice": "Export a 30-second excerpt with a long delay ending. Verify that the tail is intact and no extra silent minute follows it.",
+      "success": "The delivered file begins, ends, and sounds exactly as intended.",
+      "tags": [
+        "export",
+        "bounce",
+        "mixdown",
+        "wav",
+        "mp3",
+        "tail",
+        "render"
+      ],
+      "sources": [
+        "mixdown"
+      ],
+      "question": "What should you verify after rendering?",
+      "options": [
+        "The actual exported file",
+        "Only the session screenshot",
+        "Only the filename extension"
+      ],
+      "answer": 0,
+      "explanation": "The export is the deliverable, so it needs its own listening check."
+    },
+    {
+      "id": "stems",
+      "chapter": "finish",
+      "title": "Make stems someone can actually use",
+      "subtitle": "Alignment and intent matter more than the ZIP name.",
+      "visual": "export",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A multitrack export usually contains individual tracks; stems are often grouped elements such as drums, music, lead vocals, and backing vocals. People use the words differently, so label the contents clearly. Effects returns and shared bus processing can complicate reconstruction.",
+        "Export every part over a common range. Note whether files are dry, processed, or include effects. If several files each include a shared reverb or nonlinear master processor, summing them may not reproduce the original mix exactly."
+      ],
+      "steps": [
+        "Choose the intended groups or individual tracks and use Studio Pro’s Export Stems dialog.",
+        "Inspect the Tracks and Channels choices and decide which outputs match the deliverable.",
+        "Use a shared start and ending range, with clear names and a reference mix.",
+        "Import the exported files into a fresh session at unity gain and check timing, missing parts, and effect balance."
+      ],
+      "mistake": "A collection of independently normalized stems can destroy the original balance. Avoid normalization unless it is explicitly wanted.",
+      "practice": "Export lead, backing vocals, music, and effects from a small session, then rebuild a reference mix from those files.",
+      "success": "The files line up automatically and their processing state is unambiguous.",
+      "tags": [
+        "stems",
+        "multitrack",
+        "collaborate",
+        "deliver",
+        "export",
+        "alignment"
+      ],
+      "sources": [
+        "stems"
+      ],
+      "question": "Why include a stereo reference with stems?",
+      "options": [
+        "It communicates the intended overall result",
+        "It replaces all source tracks",
+        "It guarantees every plug-in transfers"
+      ],
+      "answer": 0,
+      "explanation": "The reference gives the recipient a concrete target for balance and intent."
+    },
+    {
+      "id": "templates",
+      "chapter": "advance",
+      "title": "Build a template that saves attention",
+      "subtitle": "Keep useful defaults, not a museum of plug-ins.",
+      "visual": "signal",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "A good template removes repetitive setup while leaving the music open. For vocal work, that might mean a beat track, lead and double tracks, a vocal group, two effects returns, and clear colors. It should not start with a master chain that changes every decision before you understand it.",
+        "Track presets can carry repeatable setup; a full session template can preserve routing and structure. Treat saved settings as starting points. Input devices and available plug-ins can change between computers or sessions."
+      ],
+      "steps": [
+        "Build a small clean session with your usual roles and routing.",
+        "Keep recording paths simple and check that no high-latency mastering effects are active.",
+        "Save the template or track presets with descriptive names.",
+        "Open a new session from it and verify inputs, outputs, monitoring, and blank recording space."
+      ],
+      "mistake": "A template can preserve a mistake as efficiently as a good decision. Test the version you actually save.",
+      "practice": "Time how long it takes to become ready to record before and after the template. Remove anything that does not save attention.",
+      "success": "You can begin a clean recording quickly without hunting through unused tracks.",
+      "tags": [
+        "template",
+        "preset",
+        "workflow",
+        "setup",
+        "track preset"
+      ],
+      "sources": [
+        "v-template",
+        "v-presets"
+      ],
+      "question": "What is a useful template goal?",
+      "options": [
+        "Reduce repetitive setup while keeping decisions flexible",
+        "Load every owned plug-in",
+        "Force the same tone on every song"
+      ],
+      "answer": 0,
+      "explanation": "The template should save attention, not make unearned creative decisions."
+    },
+    {
+      "id": "shortcuts",
+      "chapter": "advance",
+      "title": "Get fast at the moves you repeat",
+      "subtitle": "Five remembered commands beat fifty forgotten ones.",
+      "visual": "edit",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Speed comes from repetition on real work. Choose the actions that interrupt your flow most often: split, zoom, show the Console, show automation, and find a command. Learn those first rather than memorizing a huge cheat sheet.",
+        "Key maps differ, and Mac function keys may require the Fn modifier depending on system settings. Studio Pro’s command search and keyboard-shortcut settings are useful when a tutorial’s shortcut does not match your setup."
+      ],
+      "steps": [
+        "Write down the five actions you use most often during one session.",
+        "Look up their commands in your installed key map and verify each on a disposable example.",
+        "Practice without the mouse where it actually saves time.",
+        "Consider a macro only after the exact sequence is already reliable and repetitive."
+      ],
+      "mistake": "A macro that combines destructive actions too early can make an error faster. Keep a recoverable version and understand the commands inside it.",
+      "practice": "Edit eight bars using three chosen shortcuts. Repeat tomorrow until the actions feel automatic.",
+      "success": "You stay focused on the performance because common navigation is no longer a search task.",
+      "tags": [
+        "shortcuts",
+        "macros",
+        "keyboard",
+        "find command",
+        "speed",
+        "zoom"
+      ],
+      "sources": [
+        "v-find",
+        "v-macros",
+        "v-zoom"
+      ],
+      "question": "When is a macro most useful?",
+      "options": [
+        "After a repeated command sequence is understood and reliable",
+        "Before you know what its steps do",
+        "Only when it has at least ten actions"
+      ],
+      "answer": 0,
+      "explanation": "Automation is most useful when the underlying workflow is already sound."
+    },
+    {
+      "id": "cpu",
+      "chapter": "advance",
+      "title": "Keep the session responsive",
+      "subtitle": "Spend processing where you can hear the benefit.",
+      "visual": "levels",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "CPU load depends on the whole signal path, not only the number of tracks. One expensive instrument or oversampled processor can be a bottleneck. During recording, responsiveness matters; during mixing, you can trade a larger buffer for stability.",
+        "Rendering or transforming a committed instrument can free resources, but preserve an editable version if you may change notes or sound design. Bypass and deactivate are not always equivalent in how much processing they release."
+      ],
+      "steps": [
+        "Open the performance view and identify the actual heavy instruments or effects.",
+        "Temporarily reduce unnecessary oversampling and other costly quality modes while tracking.",
+        "Raise the buffer during mixing or render a stable part after saving an editable version.",
+        "Before final export, restore any intentional quality settings and listen for differences."
+      ],
+      "mistake": "Randomly disabling everything can change the sound without revealing the cause of the dropout. Isolate the load systematically.",
+      "practice": "Find the single biggest processing cost in a practice session and reduce it while preserving the audible result.",
+      "success": "The session plays reliably and every printed part has a recoverable source.",
+      "tags": [
+        "cpu",
+        "dropout",
+        "crackle",
+        "freeze",
+        "render",
+        "buffer",
+        "performance"
+      ],
+      "sources": [
+        "ua-latency",
+        "routing"
+      ],
+      "question": "What is a sensible first move when a session crackles under load?",
+      "options": [
+        "Identify the actual bottleneck and review buffer/latency choices",
+        "Delete all source audio",
+        "Assume the interface is broken"
+      ],
+      "answer": 0,
+      "explanation": "A focused diagnosis preserves the session and addresses the real cost."
+    },
+    {
+      "id": "ear-practice",
+      "chapter": "advance",
+      "title": "Train the ears behind the tools",
+      "subtitle": "Build recognition through controlled comparisons.",
+      "visual": "eq",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Critical listening improves when you change one thing and know what changed. First exaggerate a move enough to recognize its character; then reduce it to a useful amount. Return to the full mix before keeping it.",
+        "Frequency recognition, compression timing, and spatial judgment are separate skills. Work on one for a few minutes at a time. Short fresh listening often teaches more than hours of fatigued tweaking."
+      ],
+      "steps": [
+        "Pick a familiar eight-bar passage and a single concept to study.",
+        "Create a clear contrast, such as a broad low-mid cut versus bypass, with matched playback level.",
+        "Describe the difference without using better or worse: thinner, softer front edge, farther away, more nasal.",
+        "Reduce the effect and try to identify it again before checking the control."
+      ],
+      "mistake": "Loud, narrow frequency sweeps can be unpleasant and distort your judgment. Keep volume comfortable and use brief comparisons.",
+      "practice": "Spend ten minutes on one EQ region, then write a sentence predicting what that region will do on tomorrow’s session.",
+      "success": "You can describe a change before seeing which setting is active.",
+      "tags": [
+        "ears",
+        "ear training",
+        "listening",
+        "practice",
+        "frequency",
+        "compression"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What makes a listening exercise easier to learn from?",
+      "options": [
+        "Changing one variable at a time",
+        "Changing all plug-ins at once",
+        "Always choosing the louder version"
+      ],
+      "answer": 0,
+      "explanation": "A controlled comparison connects the audible result to a specific cause."
+    },
+    {
+      "id": "finish-habit",
+      "chapter": "advance",
+      "title": "Build the habit of finishing",
+      "subtitle": "Expertise is a trail of decisions you can explain.",
+      "visual": "export",
+      "level": "Developing craft",
+      "minutes": 8,
+      "concepts": [
+        "Progress is not just watching more tutorials. It is applying a principle, hearing the result, and carrying the lesson into the next record. A small finished song gives you feedback across the entire process; an endlessly polished loop leaves many skills untouched.",
+        "Use a repeatable cycle: make, review, identify one weakness, practice it, finish again. Keep your standards specific and your experiments limited enough that you can complete them."
+      ],
+      "steps": [
+        "Set one musical goal and one technical goal for the next session.",
+        "Choose the shortest workflow that gets you to a listenable export.",
+        "Keep a decision note describing the biggest improvement and the biggest remaining issue.",
+        "Schedule the next practice around that issue, using the relevant lesson instead of browsing aimlessly."
+      ],
+      "mistake": "A progress counter records practice, not expertise. The real evidence is what you can hear and reliably do in a new song.",
+      "practice": "Finish a 60–90 second song study this week: recorded lead, deliberate arrangement, a clear mix, and an export you have checked.",
+      "success": "You can finish another small record with fewer unexplained choices and more control over the result.",
+      "tags": [
+        "finish",
+        "practice",
+        "expert",
+        "habit",
+        "learning",
+        "artist",
+        "progress"
+      ],
+      "sources": [
+        "toolbox"
+      ],
+      "question": "What best demonstrates learning?",
+      "options": [
+        "Applying the idea successfully in a new session",
+        "Only collecting bookmarks",
+        "Watching at double speed without trying it"
+      ],
+      "answer": 0,
+      "explanation": "Transfer to your own work is stronger evidence than passive completion."
+    }
+  ],
+  "workflows": [
+    {
+      "id": "record-session",
+      "title": "Record a clean vocal",
+      "subtitle": "A calm setup for a take worth keeping.",
+      "symbol": "mic",
+      "time": "15–25 min",
+      "steps": [
+        "Save a new session in its own song folder. Name the beat and lead tracks.",
+        "Confirm Apollo is the audio device and the vocal track uses the correct mono input.",
+        "Choose one monitor path. If listening through Console, disable DAW input monitoring to avoid a duplicate.",
+        "Check what Console processing will print. Test the actual recorded file with playback inserts bypassed.",
+        "Rehearse your loudest line and set preamp gain with comfortable headroom.",
+        "Balance headphones so you can hear yourself without shouting against the beat.",
+        "Record a short test, then play it back to verify sound and timing.",
+        "Capture three purposeful takes, keep the alternatives, and save before editing."
+      ],
+      "lessonIDs": [
+        "audio-setup",
+        "apollo-monitor",
+        "gain",
+        "first-recording",
+        "takes"
+      ]
+    },
+    {
+      "id": "throw-session",
+      "title": "Make a vocal delay throw",
+      "subtitle": "Give one word a beautiful afterlife.",
+      "symbol": "repeat",
+      "time": "10–15 min",
+      "steps": [
+        "Choose a phrase ending with space before the next line.",
+        "Set a delay FX return fully wet and feed it from a vocal send.",
+        "Match the delay to the session tempo. Start with a quarter note and modest feedback.",
+        "Show the send-level automation and establish an off baseline before the phrase.",
+        "Raise the send only across the chosen word, then lower it again. Keep the return active for the tail.",
+        "Set automation to Read and replay from before the move.",
+        "Adjust the feed level, repeat tone, and feedback until the next lyric stays clear.",
+        "Save a version and compare with the dry phrase at the same lead level."
+      ],
+      "lessonIDs": [
+        "sends",
+        "delay-throw",
+        "automation",
+        "reverb"
+      ]
+    },
+    {
+      "id": "mix-session",
+      "title": "Mix a rap vocal",
+      "subtitle": "Clarity, intimacy, and space with a reason.",
+      "symbol": "slider.horizontal.3",
+      "time": "30–60 min",
+      "steps": [
+        "Choose the best performance and repair distracting edits.",
+        "Use event or clip gain to tame large outliers before compression.",
+        "Build a clear lead-to-beat balance with the faders.",
+        "Use corrective EQ only for problems you can describe. Keep vocal body intact.",
+        "Compress enough to control inconsistent peaks, then match bypass loudness.",
+        "De-ess only where sharp consonants need it. Check for a lisp.",
+        "Add a little color only if the vocal needs it; compare without it.",
+        "Blend a shared ambience and one or two deliberate throws.",
+        "Ride phrases against the beat and check the hook in mono.",
+        "Export a reference, take a break, and make a short review list."
+      ],
+      "lessonIDs": [
+        "comping",
+        "clip-gain",
+        "balance",
+        "eq",
+        "compression",
+        "deess",
+        "vocal-chain",
+        "delay-throw"
+      ]
+    },
+    {
+      "id": "logic-session",
+      "title": "Move a song from Logic",
+      "subtitle": "Keep timing and the sounds you care about.",
+      "symbol": "arrow.left.arrow.right",
+      "time": "20–40 min",
+      "steps": [
+        "Save an untouched copy of the original Logic project.",
+        "Write down sample rate, tempo, time signature, and any changes over time.",
+        "Choose a common start and end for all exports, including leading silence.",
+        "Export aligned WAVs and explicitly decide whether processing and automation are included.",
+        "Keep dry vocal alternatives and print important instruments or creative bus effects.",
+        "Export a stereo reference and label all files clearly.",
+        "Import the aligned files into a matching Studio Pro session at the same origin.",
+        "Compare the opening, a late entry, and the ending with the reference before making new edits."
+      ],
+      "lessonIDs": [
+        "logic-migration",
+        "stems",
+        "files"
+      ]
+    },
+    {
+      "id": "comp-session",
+      "title": "Build a convincing vocal comp",
+      "subtitle": "A strong performance with invisible repairs.",
+      "symbol": "scissors",
+      "time": "20–30 min",
+      "steps": [
+        "Listen to each full take and choose a strong emotional foundation.",
+        "Mark the few phrases that clearly need improvement.",
+        "Expand the layers and audition alternatives at those phrases.",
+        "Choose replacements with compatible tone, breath, and intention.",
+        "Check seams and add short fades or crossfades as needed.",
+        "Replay the whole section with the beat, without watching the edits.",
+        "Save a comp version while retaining the original layers."
+      ],
+      "lessonIDs": [
+        "takes",
+        "comping",
+        "fades",
+        "timing"
+      ]
+    },
+    {
+      "id": "no-sound-session",
+      "title": "Find the missing sound",
+      "subtitle": "Trace the route before touching random settings.",
+      "symbol": "speaker.slash",
+      "time": "5–10 min",
+      "steps": [
+        "Check the physical connection and whether the interface input meter moves.",
+        "Check the selected DAW audio device and session I/O mapping.",
+        "Confirm the track input matches the actual mic socket and that recording is armed when needed.",
+        "Confirm your chosen monitor route is audible; avoid enabling two routes as a fix.",
+        "Look for muted channels, unexpected solos, and a wrong output destination.",
+        "Check the Main meter, interface output, headphones, and their volume.",
+        "Record a short file and play it back to distinguish monitoring trouble from recording trouble."
+      ],
+      "lessonIDs": [
+        "signal",
+        "audio-setup",
+        "apollo-monitor"
+      ]
+    },
+    {
+      "id": "hook-session",
+      "title": "Make the hook lift",
+      "subtitle": "Create impact with arrangement and contrast.",
+      "symbol": "sparkles",
+      "time": "20–40 min",
+      "steps": [
+        "Define the hook’s emotional job in one sentence.",
+        "Choose a lead performance that communicates it clearly.",
+        "Record real doubles on the lines that need extra size.",
+        "Tighten distracting consonants without removing all variation.",
+        "Make room before the hook by withholding one texture or rhythmic element.",
+        "Add a supporting effect or wider background while keeping the lead centered.",
+        "Listen from the verse through the hook at a fixed master level.",
+        "Check mono and keep only the changes that strengthen the song."
+      ],
+      "lessonIDs": [
+        "doubles",
+        "performance",
+        "arrangement",
+        "stereo-mono",
+        "creative-fx"
+      ]
+    },
+    {
+      "id": "premaster-session",
+      "title": "Prepare a clean premaster",
+      "subtitle": "A complete, clearly labeled mix for the next stage.",
+      "symbol": "waveform",
+      "time": "15–25 min",
+      "steps": [
+        "Listen through the full mix and finish the arrangement, edits, and balances.",
+        "Check buses and Main for overloads or unintended solo/mute states.",
+        "Decide which bus processing is musical and which is preview loudness only.",
+        "Save a clean version while keeping the approved loud reference if useful.",
+        "Set the export range to include the intro and complete effect tail.",
+        "Export a lossless file at the session sample rate with intentional bit depth and no unrequested normalization.",
+        "Play the rendered file outside the DAW and label the version and processing state."
+      ],
+      "lessonIDs": [
+        "mix-review",
+        "premaster",
+        "loudness",
+        "export"
+      ]
+    },
+    {
+      "id": "stems-session",
+      "title": "Export usable stems",
+      "subtitle": "A package that opens in time and makes sense.",
+      "symbol": "square.stack.3d.up",
+      "time": "15–30 min",
+      "steps": [
+        "Decide whether you are exporting individual tracks or grouped stems.",
+        "Name each output by role and identify dry, processed, and effects-only files.",
+        "Select sources deliberately in Export Stems, including needed returns.",
+        "Use a common start and end for every file. Avoid independent normalization.",
+        "Include a stereo reference and notes about tempo, sample rate, and printed processing.",
+        "Import the results into a fresh session and verify timing and completeness.",
+        "Keep the original editable project and a separate backup of the delivery."
+      ],
+      "lessonIDs": [
+        "stems",
+        "export",
+        "files"
+      ]
+    },
+    {
+      "id": "review-session",
+      "title": "A focused mix review",
+      "subtitle": "Three useful changes, then a fresh listen.",
+      "symbol": "ear",
+      "time": "15–20 min",
+      "steps": [
+        "Export the current mix and take a short break.",
+        "Listen from beginning to end without adjusting controls.",
+        "Write timestamps and plain-language observations, not proposed plug-ins.",
+        "Compare a reference at similar playback loudness.",
+        "Choose only the three most important changes.",
+        "Make those changes, export a new version, and compare with the previous one.",
+        "Document the improvement and the next unanswered question in your notebook."
+      ],
+      "lessonIDs": [
+        "mix-review",
+        "references",
+        "ear-practice"
+      ]
+    },
+    {
+      "id": "practice-session",
+      "title": "Your 20-minute practice",
+      "subtitle": "A small experiment that becomes a real skill.",
+      "symbol": "timer",
+      "time": "20 min",
+      "steps": [
+        "Pick one problem in your own song and open the matching lesson.",
+        "Spend a few minutes understanding the principle and signal path.",
+        "Try one controlled change on a short passage.",
+        "Level-match before and after. Describe the result in concrete words.",
+        "Repeat at a smaller, musically useful amount.",
+        "Write what worked and mark the lesson practiced only after applying it.",
+        "Export the result or save a recoverable version, then stop."
+      ],
+      "lessonIDs": [
+        "ear-practice",
+        "finish-habit"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "mic-silent",
+      "question": "Why can’t I hear my microphone?",
+      "answer": "Follow the signal in order: physical mic and interface meter, selected DAW input, chosen monitor path, channel output, Main output, and headphones. If the interface meter moves but the DAW input does not, inspect device and input mapping. If the recording plays back but the live mic is silent, focus on monitoring. Open the no-sound session checklist for a guided pass.",
+      "tags": [
+        "silent",
+        "silence",
+        "sound",
+        "hear",
+        "microphone",
+        "mic",
+        "monitor",
+        "input"
+      ],
+      "lessonIDs": [
+        "signal",
+        "audio-setup",
+        "apollo-monitor"
+      ]
+    },
+    {
+      "id": "double-monitor",
+      "question": "Why does my live voice sound doubled or phasey?",
+      "answer": "Check whether Apollo Console and the DAW’s input monitor are both audible. The slightly delayed copies can interfere. Choose one live monitor route, then record and replay a short test. A doubled sound only on playback may instead come from duplicate tracks, a stereo effect, or an edit.",
+      "tags": [
+        "double",
+        "doubled",
+        "phasey",
+        "echo",
+        "monitor",
+        "console"
+      ],
+      "lessonIDs": [
+        "apollo-monitor",
+        "stereo-mono"
+      ]
+    },
+    {
+      "id": "buffer",
+      "question": "What buffer should I use for recording?",
+      "answer": "For DAW monitoring, try 64 or 128 samples and raise it if the session becomes unstable. Console monitoring reduces dependence on that round trip. During mixing, a larger buffer is usually fine. Plug-in latency also matters: a low buffer cannot undo a high-latency processor elsewhere in the live path.",
+      "tags": [
+        "buffer",
+        "latency",
+        "lag",
+        "late",
+        "1024",
+        "128",
+        "64",
+        "recording"
+      ],
+      "lessonIDs": [
+        "latency",
+        "apollo-monitor",
+        "cpu"
+      ]
+    },
+    {
+      "id": "crackle",
+      "question": "Why does my audio crackle or drop out?",
+      "answer": "Separate overload distortion from processing dropouts. Check input and bus meters first. If the issue follows CPU load, try a larger buffer and identify the costly instrument or effect. If it exists in a clean captured file even at safe levels, inspect the source, cables, interface setup, and clock/sample-rate configuration.",
+      "tags": [
+        "crackle",
+        "dropout",
+        "click",
+        "pop",
+        "cpu",
+        "buffer"
+      ],
+      "lessonIDs": [
+        "cpu",
+        "gain",
+        "latency"
+      ]
+    },
+    {
+      "id": "clipping",
+      "question": "Can lowering the vocal fader fix a clipped recording?",
+      "answer": "It lowers playback volume but cannot undo distortion already captured at the input. Reduce preamp gain and rerecord when possible. A restoration tool may help a salvage situation, but it cannot promise the original waveform. If clipping happens only later in a plug-in or bus, fix that stage instead.",
+      "tags": [
+        "clipping",
+        "clipped",
+        "distortion",
+        "red",
+        "preamp",
+        "gain"
+      ],
+      "lessonIDs": [
+        "gain",
+        "cleanup"
+      ]
+    },
+    {
+      "id": "dry-console",
+      "question": "Does UAD MON mean my recording is completely dry?",
+      "answer": "For ordinary Console insert slots, MON monitors processing without printing those inserts to the DAW input. Unison processing is a separate upstream case and is committed. Record a short test and listen with DAW effects bypassed so you know what your exact routing is capturing.",
+      "tags": [
+        "uad",
+        "mon",
+        "rec",
+        "unison",
+        "console",
+        "dry",
+        "print"
+      ],
+      "lessonIDs": [
+        "apollo-monitor"
+      ]
+    },
+    {
+      "id": "spark-console",
+      "question": "Can I put UAD Spark plug-ins in Apollo Console?",
+      "answer": "Native UADx/Spark plug-ins run in the DAW on the computer. Apollo Console uses compatible UAD-2 DSP versions. Owning one format does not mean every plug-in is available in the other. Choose the monitoring route first, then use the format that actually supports it.",
+      "tags": [
+        "spark",
+        "uadx",
+        "console",
+        "plugin",
+        "dsp",
+        "native"
+      ],
+      "lessonIDs": [
+        "apollo-monitor",
+        "vocal-chain"
+      ]
+    },
+    {
+      "id": "throw",
+      "question": "How do I put a delay on just one word?",
+      "answer": "Use a delay on a fully wet FX return and automate the lead’s send level. Raise the feed over the target word and return it to off afterward. Keep the return active so the tail can finish. Match the note division to the groove and reduce feedback if repeats collide with the next line.",
+      "tags": [
+        "delay",
+        "throw",
+        "throws",
+        "word",
+        "last",
+        "echo",
+        "send"
+      ],
+      "lessonIDs": [
+        "delay-throw",
+        "sends",
+        "automation"
+      ]
+    },
+    {
+      "id": "dry-wet",
+      "question": "What does automating dry/wet actually change?",
+      "answer": "It changes the blend inside that particular effect. On a vocal insert, that can replace some direct vocal with processed sound. A send-level move instead changes what feeds a separate return while the source stays on its normal path. Know which control your automation lane is attached to.",
+      "tags": [
+        "dry",
+        "wet",
+        "mix",
+        "automating",
+        "automation",
+        "blend"
+      ],
+      "lessonIDs": [
+        "sends",
+        "automation",
+        "delay-throw"
+      ]
+    },
+    {
+      "id": "tail-cut",
+      "question": "Why does my delay tail cut off?",
+      "answer": "If you mute the return or bypass the delay, you can cut the sound already ringing inside it. For a throw, stop new input with the send and leave the return audible. Also check the export end range, gates, and whether another automation lane changes the return volume.",
+      "tags": [
+        "tail",
+        "cut",
+        "cutoff",
+        "delay",
+        "return",
+        "mute",
+        "export"
+      ],
+      "lessonIDs": [
+        "delay-throw",
+        "export"
+      ]
+    },
+    {
+      "id": "automation-read",
+      "question": "Why does my fader snap back or ignore a manual change?",
+      "answer": "A Read automation curve can restore the stored value during playback. Inspect the parameter’s automation lane and edit the curve if the move should persist. If controls unexpectedly overwrite a curve, check for Touch, Latch, or Write and return to Read when the recording pass is finished.",
+      "tags": [
+        "fader",
+        "snap",
+        "back",
+        "automation",
+        "read",
+        "latch",
+        "write"
+      ],
+      "lessonIDs": [
+        "automation"
+      ]
+    },
+    {
+      "id": "highpass",
+      "question": "Which Pro-Q shape is the high-pass filter?",
+      "answer": "Choose Low Cut. It reduces low frequencies while allowing higher ones through. Low Shelf is a different shape. Start with a low cutoff and a moderate slope, move upward slowly with the beat playing, and back off before the voice becomes thin.",
+      "tags": [
+        "pro",
+        "q",
+        "proq",
+        "high",
+        "pass",
+        "highpass",
+        "low",
+        "cut",
+        "filter",
+        "fabfilter"
+      ],
+      "lessonIDs": [
+        "low-cut",
+        "eq"
+      ]
+    },
+    {
+      "id": "mud",
+      "question": "Why does my vocal sound muddy or boxy?",
+      "answer": "First check recording distance, room sound, and the vocal-to-beat balance. Listen for excessive low-mid buildup rather than cutting a fixed frequency by habit. A modest broad reduction may help; heavy low cutting can remove body while leaving boxiness. Compare in the full mix at matched loudness.",
+      "tags": [
+        "mud",
+        "muddy",
+        "boxy",
+        "muffled",
+        "lowmid",
+        "vocal"
+      ],
+      "lessonIDs": [
+        "mic-technique",
+        "balance",
+        "eq",
+        "low-cut"
+      ]
+    },
+    {
+      "id": "harsh",
+      "question": "Why is my vocal harsh even after de-essing?",
+      "answer": "Identify whether the problem is sharp consonants, an aggressive vowel, distortion, or too much brightness across the whole voice. A de-esser mainly targets sibilance. Revisit the recording, EQ boosts, compression, and saturation. Treat the specific region or phrase instead of darkening every word.",
+      "tags": [
+        "harsh",
+        "sharp",
+        "piercing",
+        "sibilance",
+        "sss",
+        "deess"
+      ],
+      "lessonIDs": [
+        "deess",
+        "eq",
+        "vocal-chain"
+      ]
+    },
+    {
+      "id": "thin",
+      "question": "Why did my vocal become thin after EQ?",
+      "answer": "You may have cut useful body with a high cutoff, broad low-mid removal, or several overlapping corrections. Bypass the chain in stages and compare at the same level. Restore weight until the vocal fits the beat, then keep only the cuts that solve an audible problem.",
+      "tags": [
+        "thin",
+        "body",
+        "eq",
+        "low",
+        "cut",
+        "weak"
+      ],
+      "lessonIDs": [
+        "low-cut",
+        "eq",
+        "vocal-chain"
+      ]
+    },
+    {
+      "id": "compressor",
+      "question": "What compressor settings should I use on my vocal?",
+      "answer": "Choose settings by the result. Start with a moderate ratio and a threshold that controls louder words, then compare attack for consonant impact and release for natural recovery. Match output loudness to bypass. If one word drives extreme reduction, fix that outlier with clip gain first.",
+      "tags": [
+        "compressor",
+        "compression",
+        "settings",
+        "ratio",
+        "attack",
+        "release",
+        "threshold"
+      ],
+      "lessonIDs": [
+        "compression",
+        "clip-gain"
+      ]
+    },
+    {
+      "id": "chain",
+      "question": "What order should my vocal plug-ins go in?",
+      "answer": "Start with a reason for each stage. Corrective EQ, compression, and de-essing where needed is a useful baseline; optional color comes only if it helps. Reverb and delay can use sends. Change order when the interaction gives you a clear reason, and avoid loading every bundle you own.",
+      "tags": [
+        "chain",
+        "order",
+        "plugins",
+        "fabfilter",
+        "izotope",
+        "soothe",
+        "landr",
+        "uad"
+      ],
+      "lessonIDs": [
+        "vocal-chain"
+      ]
+    },
+    {
+      "id": "tune-wrong",
+      "question": "Why does Auto-Tune pull my voice to the wrong notes?",
+      "answer": "Verify the actual key, scale, input range, and intended melody. The beat’s label or automatic detection may be wrong or incomplete. Test a held note against the music. Faster correction makes a wrong target more obvious; it does not fix the target.",
+      "tags": [
+        "autotune",
+        "auto",
+        "tune",
+        "tuning",
+        "pitch",
+        "key",
+        "wrong",
+        "notes"
+      ],
+      "lessonIDs": [
+        "tuning",
+        "harmony"
+      ]
+    },
+    {
+      "id": "takes-layers",
+      "question": "How do I keep several vocal takes without losing them?",
+      "answer": "Use Record Takes to Layers and test the behavior on a short range. Keep a strong full performance as your base, then comp only where another take improves it. Use separate tracks when the performances should sound together as doubles or ad-libs.",
+      "tags": [
+        "takes",
+        "layers",
+        "comp",
+        "comping",
+        "record",
+        "alternate"
+      ],
+      "lessonIDs": [
+        "takes",
+        "comping",
+        "doubles"
+      ]
+    },
+    {
+      "id": "logic-transfer",
+      "question": "How do I bring my Logic session into Studio Pro?",
+      "answer": "Use aligned audio exports from a common start, plus a stereo reference. Match sample rate and document tempo. Print essential instrument sounds and creative processing while retaining dry options and the original Logic project. Plug-in states and routing are not guaranteed to transfer with a project file.",
+      "tags": [
+        "logic",
+        "migrate",
+        "migration",
+        "transfer",
+        "import",
+        "stems"
+      ],
+      "lessonIDs": [
+        "logic-migration",
+        "stems"
+      ]
+    },
+    {
+      "id": "no-edit",
+      "question": "Why won’t my editing tool do what I expect?",
+      "answer": "Check what is selected, whether a layer or event is active, whether the track or event is locked, and which tool or modifier is currently assigned. Zoom in and try a simple edit on a duplicate. If following a Logic tutorial, do not assume its take-folder gestures map directly to Studio Pro layers.",
+      "tags": [
+        "edit",
+        "editing",
+        "scissors",
+        "fade",
+        "tool",
+        "locked",
+        "click"
+      ],
+      "lessonIDs": [
+        "orientation",
+        "comping",
+        "fades",
+        "shortcuts"
+      ]
+    },
+    {
+      "id": "copy-double",
+      "question": "Can I duplicate my lead to make it wide?",
+      "answer": "Identical copies are not the same as independent doubles. Panning identical audio left and right can remain effectively centered; adding delay may create width with phase tradeoffs. Record new supporting performances when you want natural double texture, then check the mix in mono.",
+      "tags": [
+        "duplicate",
+        "copy",
+        "double",
+        "width",
+        "wide",
+        "stereo"
+      ],
+      "lessonIDs": [
+        "doubles",
+        "stereo-mono"
+      ]
+    },
+    {
+      "id": "reverb-mess",
+      "question": "How do I stop reverb from swallowing the words?",
+      "answer": "Lower the send, shorten the decay, and adjust pre-delay while the full mix plays. Filter the return if it adds low-mid mud or sharpness. If you want a bigger tail in the gaps, try gentle sidechain ducking on the return. Keep the direct lead clear first.",
+      "tags": [
+        "reverb",
+        "mess",
+        "swallow",
+        "words",
+        "fog",
+        "wet",
+        "space"
+      ],
+      "lessonIDs": [
+        "reverb",
+        "ducking",
+        "sends"
+      ]
+    },
+    {
+      "id": "lufs-target",
+      "question": "Do I have to master everything to −14 LUFS?",
+      "answer": "No single integrated loudness number is a universal artistic mastering target. Streaming normalization and delivery requirements differ. Match your reference’s playback level, then judge impact, clarity, distortion, and dynamics. Check the destination’s current requirements when you release.",
+      "tags": [
+        "lufs",
+        "14",
+        "loudness",
+        "master",
+        "mastering",
+        "target",
+        "streaming"
+      ],
+      "lessonIDs": [
+        "loudness",
+        "premaster"
+      ]
+    },
+    {
+      "id": "premaster-level",
+      "question": "Does a premaster have to peak at exactly −6 dB?",
+      "answer": "No. A clean, unclipped mix with appropriate headroom and clear delivery instructions matters more than one exact peak. Preserve intentional musical bus processing and distinguish a preview loudness limiter from the mix’s sound. Do not create headroom by lowering only the final fader after upstream clipping.",
+      "tags": [
+        "premaster",
+        "6",
+        "db",
+        "headroom",
+        "peak",
+        "level"
+      ],
+      "lessonIDs": [
+        "premaster",
+        "gain"
+      ]
+    },
+    {
+      "id": "export-tail",
+      "question": "Why is the ending missing from my export?",
+      "answer": "Check the export range and any tail option, then allow enough time after the last event for the actual effects to finish. Inspect unintended mute, solo, or automation states. Play the rendered file outside the DAW; the timeline alone does not prove the export is complete.",
+      "tags": [
+        "export",
+        "ending",
+        "missing",
+        "tail",
+        "bounce",
+        "cut",
+        "range"
+      ],
+      "lessonIDs": [
+        "export",
+        "delay-throw"
+      ]
+    },
+    {
+      "id": "missing-files",
+      "question": "Why are my audio files missing when I reopen?",
+      "answer": "The session may reference media outside its folder. Locate the originals and relink them, then use the DAW’s media-management options to collect what the session needs. Keep a separate backup. Avoid reorganizing active source files in Finder without checking the session references.",
+      "tags": [
+        "missing",
+        "files",
+        "media",
+        "save",
+        "backup",
+        "reopen"
+      ],
+      "lessonIDs": [
+        "files"
+      ]
+    },
+    {
+      "id": "next-step",
+      "question": "What should I learn next as a beginner?",
+      "answer": "Start with signal flow, audio setup, recording levels, and a clean first take. Then learn comping and editing, a fader balance, basic EQ and compression, and sends. Finish a short song study before adding complex processing. The Path view keeps this sequence organized while leaving every lesson available.",
+      "tags": [
+        "beginner",
+        "next",
+        "learn",
+        "start",
+        "learning",
+        "first",
+        "expert"
+      ],
+      "lessonIDs": [
+        "orientation",
+        "first-recording",
+        "finish-habit"
+      ]
+    },
+    {
+      "id": "beat-import",
+      "question": "Why does my imported beat play at the wrong speed?",
+      "answer": "Check the file’s original tempo, the session tempo, and any automatic stretching or tempo-follow setting applied to the audio event. Compare against the original file outside the DAW. If it should stay at its existing speed, remove unintended time stretching before recording vocals over it.",
+      "tags": [
+        "beat",
+        "import",
+        "speed",
+        "slow",
+        "fast",
+        "tempo",
+        "stretch"
+      ],
+      "lessonIDs": [
+        "first-recording",
+        "timing"
+      ]
+    },
+    {
+      "id": "stock-plugins",
+      "question": "Do I need more plug-ins to make a professional song?",
+      "answer": "Your existing tools are already more than enough for the core jobs. Recording, performance, arrangement, balance, and listening decisions usually provide the larger gains. Add a tool only when you can name a specific limitation and hear why the replacement helps.",
+      "tags": [
+        "stock",
+        "plugins",
+        "buy",
+        "professional",
+        "tools",
+        "landr",
+        "soothe"
+      ],
+      "lessonIDs": [
+        "vocal-chain",
+        "balance",
+        "finish-habit"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Attack",
+      "meaning": "How quickly a dynamics processor responds after the conditions for reduction are met.",
+      "example": "A slower compressor attack may let more of a consonant’s front edge through."
+    },
+    {
+      "term": "Automation",
+      "meaning": "Stored changes to a parameter over the session timeline.",
+      "example": "Raise a delay send over one word and lower it afterward."
+    },
+    {
+      "term": "Aux / FX return",
+      "meaning": "A channel carrying the processed output of a parallel effect path.",
+      "example": "A fully wet reverb returns to the mix on its own channel."
+    },
+    {
+      "term": "Bit depth",
+      "meaning": "The precision used to represent sample amplitudes in a digital format.",
+      "example": "24-bit recording offers useful working dynamic range; gain staging still matters."
+    },
+    {
+      "term": "Bounce / render",
+      "meaning": "Create an audio file from a live arrangement or processing path.",
+      "example": "Print a synth part so another DAW can play the exact sound."
+    },
+    {
+      "term": "Buffer",
+      "meaning": "A block of audio processed by the computer at a time.",
+      "example": "A smaller buffer can improve live responsiveness but increase processing pressure."
+    },
+    {
+      "term": "Bus",
+      "meaning": "A channel that combines and processes signals routed to it.",
+      "example": "Send all backing vocals to a group bus for one overall level adjustment."
+    },
+    {
+      "term": "Channel",
+      "meaning": "An audio signal path in the mixer.",
+      "example": "A virtual instrument can produce several channels from one track."
+    },
+    {
+      "term": "Clip / event gain",
+      "meaning": "Level adjustment associated with audio material before later channel processing.",
+      "example": "Turn down one shouted word before it drives the compressor too hard."
+    },
+    {
+      "term": "Clipping",
+      "meaning": "An overload where a signal exceeds what a stage can represent or handle cleanly.",
+      "example": "A red input meter can warn that you are recording a distorted peak."
+    },
+    {
+      "term": "Comp",
+      "meaning": "A performance assembled from selected parts of alternate takes.",
+      "example": "Use take two for the first line and take three for the ending."
+    },
+    {
+      "term": "Compressor",
+      "meaning": "A processor that reduces dynamic level according to its detector and settings.",
+      "example": "Control peaks so the lyric stays present without constant fader moves."
+    },
+    {
+      "term": "Crossfade",
+      "meaning": "An overlap where one piece fades out while the other fades in.",
+      "example": "Hide a seam between two chosen vocal takes."
+    },
+    {
+      "term": "dB",
+      "meaning": "A logarithmic way to express a ratio, such as a change in level.",
+      "example": "A fader move of −3 dB is a relative reduction, not a complete loudness description."
+    },
+    {
+      "term": "dBFS",
+      "meaning": "Digital level relative to full scale.",
+      "example": "0 dBFS is the sample ceiling of a fixed-point file, not a recording target."
+    },
+    {
+      "term": "De-esser",
+      "meaning": "A processor that reduces excessive sibilant energy.",
+      "example": "Control sharp S sounds while preserving the body of vowels."
+    },
+    {
+      "term": "Decay",
+      "meaning": "How long a sound or reverberant response takes to die away.",
+      "example": "A long reverb decay can fill the gap after a final lyric."
+    },
+    {
+      "term": "Dither",
+      "meaning": "A small noise signal used when reducing quantization precision.",
+      "example": "Apply it deliberately at a final bit-depth reduction, rather than repeatedly throughout a chain."
+    },
+    {
+      "term": "Double",
+      "meaning": "A separately performed supporting version of a part.",
+      "example": "Record two new hook takes for natural left/right width."
+    },
+    {
+      "term": "Dry / wet",
+      "meaning": "Direct sound versus sound processed by an effect.",
+      "example": "A parallel delay return is usually wet while the vocal channel carries the dry voice."
+    },
+    {
+      "term": "Ducking",
+      "meaning": "Reducing one signal in response to another.",
+      "example": "Lower reverb while the singer speaks, then let it return in the gap."
+    },
+    {
+      "term": "EQ",
+      "meaning": "Equalization: altering the balance of frequency regions.",
+      "example": "Reduce a low-mid buildup while keeping enough weight in the voice."
+    },
+    {
+      "term": "Event",
+      "meaning": "A piece of audio or musical material placed on the timeline.",
+      "example": "Trim the end of a vocal event without deleting the entire track."
+    },
+    {
+      "term": "Feedback",
+      "meaning": "The amount of a delay’s output fed back into its input.",
+      "example": "More feedback usually creates more repeats and can build into runaway sound at extreme settings."
+    },
+    {
+      "term": "Formant",
+      "meaning": "A resonance pattern that contributes to perceived vocal character.",
+      "example": "A formant shift can make a voice seem smaller or larger without a corresponding melody change."
+    },
+    {
+      "term": "Gain staging",
+      "meaning": "Managing signal levels through each part of a chain.",
+      "example": "Keep the preamp, plug-in inputs, buses, and output from accidental overload."
+    },
+    {
+      "term": "Headroom",
+      "meaning": "The available margin before a signal overloads a stage.",
+      "example": "Leave space for a louder-than-rehearsed word during recording."
+    },
+    {
+      "term": "High pass / low cut",
+      "meaning": "A filter that reduces lower frequencies and passes higher ones.",
+      "example": "In Pro-Q, use Low Cut to reduce unwanted rumble."
+    },
+    {
+      "term": "Insert",
+      "meaning": "An effect placed directly in a channel’s signal path.",
+      "example": "A compressor insert changes the vocal before it reaches downstream stages."
+    },
+    {
+      "term": "Latency",
+      "meaning": "The time between an input event and the resulting output.",
+      "example": "A performer can feel delayed headphones even when the recorded timing is otherwise handled correctly."
+    },
+    {
+      "term": "Layer",
+      "meaning": "An alternate set of material associated with a track.",
+      "example": "Keep several lead takes on layers before comping."
+    },
+    {
+      "term": "Limiter",
+      "meaning": "A dynamics processor used to constrain output peaks strongly.",
+      "example": "Catch final peaks carefully without flattening the kick or consonants."
+    },
+    {
+      "term": "LUFS",
+      "meaning": "A family of loudness measurements designed around perceived program level.",
+      "example": "Integrated LUFS summarizes a whole track; it is not a score for musical quality."
+    },
+    {
+      "term": "Masking",
+      "meaning": "When one sound makes another harder to hear.",
+      "example": "Keys in the vocal’s important midrange can obscure words even when both tracks are loud."
+    },
+    {
+      "term": "MIDI",
+      "meaning": "Musical event instructions rather than a recorded waveform.",
+      "example": "A note message can trigger a piano or synth depending on the loaded instrument."
+    },
+    {
+      "term": "Mono",
+      "meaning": "A single audio channel or a combined single-channel presentation.",
+      "example": "One ordinary microphone is normally recorded to a mono track."
+    },
+    {
+      "term": "Normalization",
+      "meaning": "An automatic level adjustment to a chosen measurement target.",
+      "example": "Independently peak-normalizing every stem can change their intended balance."
+    },
+    {
+      "term": "Oversampling",
+      "meaning": "Processing internally at a higher rate to reduce certain digital artifacts.",
+      "example": "Some saturation modes sound cleaner with oversampling but cost more CPU."
+    },
+    {
+      "term": "Pan",
+      "meaning": "Placement or balance across the stereo field.",
+      "example": "Keep the lead centered and place supporting doubles toward the sides."
+    },
+    {
+      "term": "Parallel processing",
+      "meaning": "Blending a processed path with an additional signal path.",
+      "example": "Mix a compressed duplicate underneath the main vocal for extra density."
+    },
+    {
+      "term": "Phase",
+      "meaning": "The position of a repeating waveform cycle relative to another or to time.",
+      "example": "Combining delayed versions of the same sound can reinforce some frequencies and cancel others."
+    },
+    {
+      "term": "Polarity",
+      "meaning": "The positive/negative orientation of a signal.",
+      "example": "Flipping polarity multiplies the waveform by −1; it does not fix every timing-related phase issue."
+    },
+    {
+      "term": "Pre-delay",
+      "meaning": "A gap before the reverberant response begins.",
+      "example": "A short gap can keep the lead’s articulation distinct from its ambience."
+    },
+    {
+      "term": "Pre-fader / post-fader",
+      "meaning": "Whether a branch takes signal before or after the channel fader.",
+      "example": "A post-fader effects send follows vocal level changes; a pre-fader send can remain independent."
+    },
+    {
+      "term": "Premaster",
+      "meaning": "A completed mix prepared for a later mastering stage.",
+      "example": "Deliver a clean WAV and identify any intentional bus processing."
+    },
+    {
+      "term": "Q",
+      "meaning": "A measure related to the width or resonance of an EQ filter.",
+      "example": "A higher-Q bell is narrower than a lower-Q bell in the same EQ."
+    },
+    {
+      "term": "Quantize",
+      "meaning": "Move musical events toward a timing grid according to chosen rules.",
+      "example": "Use partial strength if full snapping makes the groove stiff."
+    },
+    {
+      "term": "Ratio",
+      "meaning": "How strongly a compressor controls level above its threshold region.",
+      "example": "In an ideal 4:1 case, 4 dB above threshold becomes 1 dB above it."
+    },
+    {
+      "term": "Release",
+      "meaning": "How a dynamics processor recovers from gain reduction.",
+      "example": "Too-fast recovery can sound jumpy; too-slow recovery may hold down the next phrase."
+    },
+    {
+      "term": "Sample rate",
+      "meaning": "The number of digital samples representing one second of audio.",
+      "example": "48 kHz means 48,000 samples per second, not 48,000 notes."
+    },
+    {
+      "term": "Saturation",
+      "meaning": "A nonlinear change that can add harmonics and alter peaks.",
+      "example": "A little can add density; too much can make a bright vocal brittle."
+    },
+    {
+      "term": "Send",
+      "meaning": "An additional feed from a channel to another destination.",
+      "example": "Feed a little lead vocal into a shared delay return."
+    },
+    {
+      "term": "Sibilance",
+      "meaning": "Strong high-frequency consonant energy in speech or singing.",
+      "example": "An S can feel too sharp even when the vowel before it sounds balanced."
+    },
+    {
+      "term": "Sidechain",
+      "meaning": "A signal used to control or influence a processor’s behavior.",
+      "example": "Use the dry voice as the compressor detector signal on a reverb return."
+    },
+    {
+      "term": "Stem",
+      "meaning": "Usually a grouped audio export, though people also use the word for individual tracks.",
+      "example": "Label a file Lead Vocals Wet so its role and processing are clear."
+    },
+    {
+      "term": "Threshold",
+      "meaning": "The level region at which a dynamics process starts acting.",
+      "example": "Lowering it usually causes more of a vocal to trigger compression."
+    },
+    {
+      "term": "Throw",
+      "meaning": "An effect accent applied to a specific word or musical moment.",
+      "example": "Let the final word echo while the rest of the verse stays comparatively dry."
+    },
+    {
+      "term": "Track",
+      "meaning": "A timeline container for a performance or other session data.",
+      "example": "An instrument track holds notes that produce audio through an instrument channel."
+    },
+    {
+      "term": "Transient",
+      "meaning": "A brief front edge or sudden energy change in a sound.",
+      "example": "The initial hit of a snare or the attack of a consonant."
+    },
+    {
+      "term": "True peak",
+      "meaning": "An estimate of peaks that may occur between stored samples after reconstruction.",
+      "example": "A true-peak meter can reveal a risk that a sample-peak meter misses."
+    },
+    {
+      "term": "Unison",
+      "meaning": "Apollo’s integrated preamp and compatible plug-in technology.",
+      "example": "A Unison insert is on the recording input path; MON is not a universal undo switch for it."
+    },
+    {
+      "term": "Velocity",
+      "meaning": "A MIDI performance value often mapped to intensity or tone.",
+      "example": "A harder piano note may trigger a brighter sample, not just a louder one."
+    }
+  ],
+  "sources": [
+    {
+      "id": "toolbox",
+      "title": "Studio Pro Toolbox tutorial library",
+      "author": "Lukas Ruschitzka",
+      "url": "https://s1toolbox.com/tutorials",
+      "kind": "library"
+    },
+    {
+      "id": "console",
+      "title": "The Console",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Mixing_Topics/The_Console.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "audio",
+      "title": "Audio tracks and recording inputs",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Recording_Topics/Audio_Tracks.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "routing",
+      "title": "Effects signal routing",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Mixing_Topics/Effects_Signal_Routing.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "layers",
+      "title": "Track layers",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Recording_Topics/Track_Layers.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "comping",
+      "title": "Comping",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Editing_Topics/Comping.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "automation",
+      "title": "Automation types",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Automation_Topics/Automation_Types.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "editing-automation",
+      "title": "Editing automation curves",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Automation_Topics/Editing_Automation_Envelopes.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "automation-modes",
+      "title": "Automation modes and controller behavior",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Control_Link_Topics/Automation_with_Hardware.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "clip-gain",
+      "title": "Clips and clip-gain curves",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Editing_Topics/Clips_and_Clip_Gain_Curves.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "mixdown",
+      "title": "Exporting a mixdown",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Mixing_Topics/Mixing_Down.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "stems",
+      "title": "Export stems from your session",
+      "author": "Fender Studio Pro manual",
+      "url": "https://fenderstudiopromanual.fender.com/en/Content/Saving%2C%20Import%20and%20Export/Export_Stems_from_your_Session.htm",
+      "kind": "manual"
+    },
+    {
+      "id": "proq-bands",
+      "title": "Pro-Q band controls: Low Cut, Bell, and Shelf",
+      "author": "FabFilter",
+      "url": "https://www.fabfilter.com/help/pro-q/using/bandcontrols",
+      "kind": "manual"
+    },
+    {
+      "id": "proq-mode",
+      "title": "Pro-Q processing modes",
+      "author": "FabFilter",
+      "url": "https://www.fabfilter.com/help/pro-q/using/processingmode",
+      "kind": "manual"
+    },
+    {
+      "id": "ua-inserts",
+      "title": "Console inserts, UAD REC/MON, and Unison",
+      "author": "Universal Audio",
+      "url": "https://help.uaudio.com/hc/en-us/articles/25350369296660-UAD-Plug-In-Inserts",
+      "kind": "manual"
+    },
+    {
+      "id": "ua-latency",
+      "title": "Latency in DAW sessions",
+      "author": "Universal Audio",
+      "url": "https://help.uaudio.com/hc/en-us/articles/360050596812-Why-am-I-Getting-Latency-in-my-DAW-Sessions",
+      "kind": "manual"
+    },
+    {
+      "id": "logic-export",
+      "title": "Export tracks as audio files in Logic Pro",
+      "author": "Apple",
+      "url": "https://support.apple.com/en-ca/guide/logicpro/lgcpb27f70f9/10.7/mac/11.6.1",
+      "kind": "manual"
+    },
+    {
+      "id": "v-find",
+      "title": "Find Command: faster navigation",
+      "author": "Lukas Ruschitzka",
+      "url": "https://youtu.be/d8qSJolQ7hk",
+      "kind": "video"
+    },
+    {
+      "id": "v-macros",
+      "title": "Working with the Macro Toolbar",
+      "author": "Lukas Ruschitzka",
+      "url": "https://youtu.be/IUPDvVelaHY",
+      "kind": "video"
+    },
+    {
+      "id": "v-fades",
+      "title": "A workflow for fast fades",
+      "author": "Marcus Huyskens",
+      "url": "https://youtu.be/WW2SpZrPOxw",
+      "kind": "video"
+    },
+    {
+      "id": "v-presets",
+      "title": "Create your own track presets",
+      "author": "Lukas Ruschitzka",
+      "url": "https://youtu.be/BNvHPBU4Kp4",
+      "kind": "video"
+    },
+    {
+      "id": "v-save",
+      "title": "Save files and future-proof a session",
+      "author": "Andrew Barr",
+      "url": "https://youtu.be/k2bKlUdnXCc",
+      "kind": "video"
+    },
+    {
+      "id": "v-template",
+      "title": "Using a session as a template",
+      "author": "Lukas Ruschitzka",
+      "url": "https://youtu.be/R8mJgjbTqqM",
+      "kind": "video"
+    },
+    {
+      "id": "v-zoom",
+      "title": "Useful zoom shortcuts",
+      "author": "Gregor Beyerle",
+      "url": "https://youtu.be/QvnWPN91MbE",
+      "kind": "video"
+    },
+    {
+      "id": "v-instruments",
+      "title": "Instrument tracks explained",
+      "author": "Lukas Ruschitzka",
+      "url": "https://youtu.be/w4IarxKp9lQ",
+      "kind": "video"
+    },
+    {
+      "id": "v-master",
+      "title": "Master and release music in Studio Pro",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/njCaNxj2L9M",
+      "kind": "video"
+    },
+    {
+      "id": "v-patterns",
+      "title": "Remix audio loops in Pattern mode",
+      "author": "Gregor Beyerle",
+      "url": "https://youtu.be/wHRbJyezTAg",
+      "kind": "video"
+    },
+    {
+      "id": "v-record",
+      "title": "Record and comp vocals in Studio Pro",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/vNDe9dZ5FWQ",
+      "kind": "video"
+    },
+    {
+      "id": "v-layers",
+      "title": "The Takes to Layers workflow",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/6eAYE9CosBE",
+      "kind": "video"
+    },
+    {
+      "id": "v-comp",
+      "title": "A practical guide to audio comping",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/MdMRuxyqnEU",
+      "kind": "video"
+    },
+    {
+      "id": "v-align",
+      "title": "Align vocals with the DAW’s own tools",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/WOKpOjATVqM",
+      "kind": "video"
+    },
+    {
+      "id": "v-tune",
+      "title": "Vocal Tune in Studio Pro 8.1",
+      "author": "Gregor Beyerle",
+      "url": "https://youtu.be/K2xYpIfrbac",
+      "kind": "video"
+    },
+    {
+      "id": "v-throw",
+      "title": "Add delay to one part of a vocal",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/ZSbv8rqXOmg",
+      "kind": "video"
+    },
+    {
+      "id": "v-reverb",
+      "title": "Five reverb principles",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/VnCpRTsg_G8",
+      "kind": "video"
+    },
+    {
+      "id": "v-stock",
+      "title": "Better vocals with stock effects",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/P4B8UjRwCNA",
+      "kind": "video"
+    },
+    {
+      "id": "v-creative",
+      "title": "Explore creative vocal effects",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/Mhq-4fhIXyA",
+      "kind": "video"
+    },
+    {
+      "id": "v-sample",
+      "title": "Turn your voice into a playable instrument",
+      "author": "Joe Gilder",
+      "url": "https://youtu.be/XM1f6GShds4",
+      "kind": "video"
+    },
+    {
+      "id": "v-duck",
+      "title": "Ducking reverb and delay effects",
+      "author": "Gregor Beyerle",
+      "url": "https://youtu.be/o2mJNccbB98",
+      "kind": "video"
+    }
+  ]
+}

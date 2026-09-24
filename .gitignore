@@ -1,0 +1,7 @@
+build/
+DerivedData/
+*.xcresult
+*.ipa
+*.xcuserstate
+xcuserdata/
+__pycache__/
