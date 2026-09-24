@@ -83,7 +83,10 @@ struct SavedState: Codable {
     }
     func lesson(_ id: String) -> Lesson? { content.lessons.first { $0.id == id } }
     var nextLesson: Lesson? { content.lessons.first { !state.completed.contains($0.id) } }
-    var resumeLesson: Lesson? { state.lastLesson.flatMap(lesson) ?? nextLesson }
+    var resumeLesson: Lesson? {
+        if let last = state.lastLesson.flatMap(lesson), !state.completed.contains(last.id) { return last }
+        return nextLesson ?? content.lessons.last
+    }
     func chapter(_ id: String) -> Chapter? { content.chapters.first { $0.id == id } }
     func score(_ query: String, title: String, body: String, tags: [String] = []) -> Double {
         let stop: Set<String> = ["a","an","the","i","my","me","is","it","to","and","or","of","in","on","for","do","does","how","can","why","what","with","get","make","you","this","that","are","am","studio","pro","one","please"]
@@ -144,12 +147,14 @@ struct PrimaryButton: ButtonStyle {
 }
 struct SearchField: View {
     @Binding var text: String
+    @FocusState private var focused: Bool
     var prompt = "Search lessons, skills, questions…"
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: "magnifyingglass").foregroundStyle(Palette.muted)
-            TextField(prompt, text: $text).font(.subheadline).autocorrectionDisabled().accessibilityIdentifier("librarySearch")
+            TextField(prompt, text: $text).font(.subheadline).autocorrectionDisabled().focused($focused).submitLabel(.search).onSubmit { focused = false }.accessibilityIdentifier("librarySearch")
             if !text.isEmpty { Button { text = "" } label: { Image(systemName: "xmark.circle.fill") }.accessibilityLabel("Clear search") }
+            if focused { Button("Done") { focused = false }.font(.subheadline.weight(.semibold)).accessibilityIdentifier("dismissSearch") }
         }.padding(16).background(.white, in: RoundedRectangle(cornerRadius: 18)).overlay(RoundedRectangle(cornerRadius: 18).stroke(Palette.line))
     }
 }
@@ -164,5 +169,5 @@ struct SectionTitle: View {
     }
 }
 extension View {
-    func pageStyle() -> some View { self.background(Palette.paper).foregroundStyle(Palette.ink) }
+    func pageStyle() -> some View { self.background(Palette.paper).foregroundStyle(Palette.ink).scrollDismissesKeyboard(.interactively) }
 }

@@ -8,7 +8,7 @@ struct SessionsView: View {
                 Eyebrow(text: "From idea to finished record")
                 Text("A little direction.\nA lot of progress.").font(.system(size: 35, weight: .bold, design: .rounded)).tracking(-1)
                 Text("Practical checklists for the moment you’re in. Your place is saved automatically.").foregroundStyle(Palette.muted).font(.subheadline).lineSpacing(4)
-                ForEach(store.content.workflows) { workflow in NavigationLink { WorkflowView(workflow: workflow) } label: { WorkflowRow(workflow: workflow) }.buttonStyle(.plain) }
+                ForEach(store.content.workflows) { workflow in NavigationLink { WorkflowView(workflow: workflow) } label: { WorkflowRow(workflow: workflow) }.buttonStyle(.plain).accessibilityIdentifier("workflow-\(workflow.id)") }
             }.padding(22).padding(.bottom, 20)
         }.pageStyle().toolbar(.hidden, for: .navigationBar)
     }
@@ -85,7 +85,7 @@ struct AssistantView: View {
                 if submitted.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
                         Eyebrow(text: "Start here")
-                        ForEach(suggestions, id: \.self) { suggestion in Button { query = suggestion; ask() } label: { HStack { Text(suggestion).multilineTextAlignment(.leading); Spacer(); Image(systemName: "arrow.up.left") }.font(.subheadline).padding(15).background(Palette.lime.opacity(0.4), in: RoundedRectangle(cornerRadius: 16)) }.buttonStyle(.plain) }
+                        ForEach(suggestions, id: \.self) { suggestion in Button { query = suggestion; ask() } label: { HStack { Text(suggestion).multilineTextAlignment(.leading); Spacer(); Image(systemName: "arrow.up.left") }.font(.subheadline).padding(15).background(Palette.lime.opacity(0.4), in: RoundedRectangle(cornerRadius: 16)) }.buttonStyle(.plain).accessibilityIdentifier("suggestion-\(suggestion)") }
                     }
                 } else {
                     VStack(alignment: .leading, spacing: 15) {

@@ -124,7 +124,7 @@ struct EQLab: View {
                         VStack { ForEach(0..<5) { _ in Divider(); Spacer(minLength: 0) } }
                         EQCurve(kind: kind, frequency: frequency, gain: gain).stroke(Palette.ink, style: StrokeStyle(lineWidth: 3, lineCap: .round))
                     }.frame(height: 190).clipped().accessibilityLabel("Illustrative \(kind) response, frequency \(Int(frequency)) hertz")
-                    HStack { Text("20 Hz"); Spacer(); Text("1 kHz"); Spacer(); Text("20 kHz") }.font(.caption.monospaced())
+                    HStack { Text("20 Hz"); Spacer(); Text("630 Hz"); Spacer(); Text("20 kHz") }.font(.caption.monospaced())
                 }
             }
             Text("\(Int(frequency)) Hz").font(.system(.title, design: .rounded, weight: .bold)).monospacedDigit()
